@@ -1,6 +1,6 @@
 # Algorithm Challenge
 
-![Algorithm Challenge](./images/gradient.png)
+![Algorithm Challenge](./images/4-small.png)
 
 A very good place to practice algorithms is [LeetCode](https://leetcode.com) - this exercise contains practice challenges similar to the problems found on LeetCode.
 
