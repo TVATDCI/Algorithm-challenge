@@ -4,7 +4,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 
 ## Table of Contents
 
-<div style="background: url('./images/gradient.png') no-repeat center center; background-size: cover; padding: 20px; border-radius: 10px;">
+<div style="background: url('./images/alien.svg') no-repeat center center; background-size: cover;">
 
 - [Algorithm Challenge ](#algorithm-challenge-)
   - [Table of Contents](#table-of-contents)
