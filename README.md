@@ -9,7 +9,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
   - [Challenge 1: Reverse a String](#challenge-1-reverse-a-string)
   - [Challenge 2: Validate a Palindrome](#challenge-2-validate-a-palindrome)
   - [Challenge 3: Reverse an Integer](#challenge-3-reverse-an-integer)
-  - [Challenge 4: Capitalize Letters](#challenge-4-capitalize-letters)
+  - [Challenge 4: Capitalize Letters ](#challenge-4-capitalize-letters-)
   - [Challenge 5: Max Character](#challenge-5-max-character)
   - [Challenge 6: FizzBuzz](#challenge-6-fizzbuzz)
   - [Challenge 7: Longest Word](#challenge-7-longest-word)
@@ -52,9 +52,7 @@ isPalindrome("hello") === false;
 reverseInt(521) === 125;
 ```
 
-## Challenge 4: Capitalize Letters
-
-![Capitalize Letters]<img src="./images/gradient.png.png" alt="Algorithm Challenge" width="50" align="right" style="margin-left: 10px;" />
+## Challenge 4: Capitalize Letters <img src="./images/gradient.png" alt="Algorithm Challenge" width="100" style="margin-left: 10px;" />
 
 ```javascript
 // Return a string with the first letter of every word capitalized
