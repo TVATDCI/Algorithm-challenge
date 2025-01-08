@@ -1,25 +1,44 @@
-# Algorithm-challenge
+# Algorithm Challenge
 
-A very good to place to practice algorithms is https://leetcode.com - this exercise contains practice challenges similar to the problems found in leetcode.
+A very good place to practice algorithms is [LeetCode](https://leetcode.com) - this exercise contains practice challenges similar to the problems found on LeetCode.
 
-## CHALLENGE 1: REVERSE A STRING
+## Table of Contents
+
+- [Algorithm Challenge](#algorithm-challenge)
+  - [Table of Contents](#table-of-contents)
+  - [Challenge 1: Reverse a String](#challenge-1-reverse-a-string)
+  - [Challenge 2: Validate a Palindrome](#challenge-2-validate-a-palindrome)
+  - [Challenge 3: Reverse an Integer](#challenge-3-reverse-an-integer)
+  - [Challenge 4: Capitalize Letters](#challenge-4-capitalize-letters)
+  - [Challenge 5: Max Character](#challenge-5-max-character)
+  - [Challenge 6: FizzBuzz](#challenge-6-fizzbuzz)
+  - [Challenge 7: Longest Word](#challenge-7-longest-word)
+  - [Challenge 8: Array Chunking](#challenge-8-array-chunking)
+  - [Challenge 9: Flatten Array](#challenge-9-flatten-array)
+  - [Challenge 10: Anagram](#challenge-10-anagram)
+  - [Challenge 11: Add All Numbers](#challenge-11-add-all-numbers)
+  - [Challenge 12: Sum All Primes](#challenge-12-sum-all-primes)
+  - [Challenge 13: Seek and Destroy](#challenge-13-seek-and-destroy)
+  - [Challenge 14: Even \& Odd Sums](#challenge-14-even--odd-sums)
+
+## Challenge 1: Reverse a String
 
 ```javascript
 // Return a string in reverse
-//  ex:
+// ex:
 reverseString("hello") === "olleh";
 ```
 
-## CHALLENGE 2: VALIDATE A PALINDROME
+## Challenge 2: Validate a Palindrome
 
 ```javascript
 // Return true if palindrome and false if not
 // ex:
 isPalindrome("racecar") === true;
-isPalindrome("hello") == false;
+isPalindrome("hello") === false;
 ```
 
-## CHALLENGE 3: REVERSE AN INTEGER
+## Challenge 3: Reverse an Integer
 
 ```javascript
 // Return an integer in reverse
@@ -27,29 +46,29 @@ isPalindrome("hello") == false;
 reverseInt(521) === 125;
 ```
 
-## CHALLENGE 4: CAPITALIZE LETTERS
+## Challenge 4: Capitalize Letters
 
 ```javascript
 // Return a string with the first letter of every word capitalized
-//  ex:
+// ex:
 capitalizeLetters("i love javascript") === "I Love Javascript";
 ```
 
-## CHALLENGE 5: MAX CHARACTER
+## Challenge 5: Max Character
 
 ```javascript
 // Return the character that is most common in a string
 // ex:
-maxCharacter("javascript") == "a";
+maxCharacter("javascript") === "a";
 ```
 
-## CHALLENGE 6: FIZZBUZZ
+## Challenge 6: FizzBuzz
 
 ```javascript
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
 ```
 
-## CHALLENGE 7: LONGEST WORD
+## Challenge 7: Longest Word
 
 ```javascript
 // Return the longest word of a string
@@ -62,7 +81,7 @@ longestWord("My name is Brad") === ["name", "brad"];
 longestWord("Brad") === "brad";
 ```
 
-## CHALLENGE 8: ARRAY CHUNKING
+## Challenge 8: Array Chunking
 
 ```javascript
 // Split an array into chunked arrays of a specific length
@@ -71,23 +90,24 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 3) === [[1, 2, 3], [4, 5, 6], [7]];
 chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 ```
 
-## CHALLENGE 9: FLATTEN ARRAY
+## Challenge 9: Flatten Array
 
 ```javascript
 // Take an array of arrays and flatten to a single array
 // ex:
-[[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
+[[1, 2], [3, 4], [5, 6], [7]] === [1, 2, 3, 4, 5, 6, 7];
 ```
 
-### CHALLENGE 10: ANAGRAM
+## Challenge 10: Anagram
 
 ```javascript
 // Return true if anagram and false if not
-ex. 'elbow' === 'below'
-ex. 'Dormitory' === 'dirty room##'
+// ex:
+"anagram" === "nagaram";
+"Dormitory" === "dirty room##";
 ```
 
-## CHALLENGE 11: ADD ALL NUMBERS
+## Challenge 11: Add All Numbers
 
 ```javascript
 // Return a sum of all parameters entered regardless of the amount of numbers
@@ -95,26 +115,26 @@ ex. 'Dormitory' === 'dirty room##'
 addAll(2, 5, 6, 7) === 20;
 ```
 
-## CHALLENGE 12: SUM ALL PRIMES
+## Challenge 12: Sum All Primes
 
 ```javascript
 // Pass in a number to loop up to and add all of the prime numbers. A prime number is a whole number greater than 1 whose only factors are 1 and itself
-// ex.
+// ex:
 sumAllPrimes(10) === 17;
 ```
 
-## CHALENGE 13: SEEK AND DESTROY
+## Challenge 13: Seek and Destroy
 
 ```javascript
 // Remove from the array whatever is in the following arguments. Return the leftover numbers in an array
 // ex:
-seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6) == [3, 4, "hello"];
+seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6) === [3, 4, "hello"];
 ```
 
-## CHALLENGE 14: EVEN & ODD SUMS
+## Challenge 14: Even & Odd Sums
 
 ```javascript
 // Take in an array and return an array of the sums of even and odd numbers
 // ex:
-evenOddSums([50, 60, 60, 45, 71]) == [170, 116];
+evenOddSums([50, 60, 60, 45, 71]) === [170, 116];
 ```
