@@ -1,6 +1,6 @@
 # Algorithm Challenge
 
-![Algorithm Challenge](./images/4-small.png)
+![Algorithm Challenge]<img src="./images/4-small.png" alt="Algorithm Challenge" style="width: 50px " />
 
 A very good place to practice algorithms is [LeetCode](https://leetcode.com) - this exercise contains practice challenges similar to the problems found on LeetCode.
 
