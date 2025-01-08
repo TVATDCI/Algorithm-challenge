@@ -23,8 +23,6 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
   - [Challenge 13: Seek and Destroy](#challenge-13-seek-and-destroy)
   - [Challenge 14: Even \& Odd Sums](#challenge-14-even--odd-sums)
 
-</div>
-
 ## Challenge 1: Reverse a String
 
 ![Reverse a String](./images/reverse-string-diagram.png)
