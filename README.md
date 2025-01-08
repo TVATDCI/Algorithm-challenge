@@ -4,7 +4,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 
 ## Table of Contents
 
-<div style="background: url('./images/alien.svg') no-repeat center center; background-size: cover;">
+<img src="./images/alien.svg" alt="Algorithm Challenge" width="100" align="right" style="margin-left: 10px;" />
 
 - [Algorithm Challenge ](#algorithm-challenge-)
   - [Table of Contents](#table-of-contents)
@@ -56,7 +56,7 @@ isPalindrome("hello") === false;
 reverseInt(521) === 125;
 ```
 
-## Challenge 4: Capitalize Letters <img src="./images/ted.png" alt="Algorithm Challenge" width="35" align="right" style="border-radius: 50%" />
+## Challenge 4: Capitalize Letters <img src="./images/ted.png" alt="Algorithm Challenge" width="35" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return a string with the first letter of every word capitalized
