@@ -4,7 +4,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 
 ## Table of Contents
 
-<img src="./images/alien.svg" alt="Algorithm Challenge" width="100" align="right" style="margin-left: 10px;" />
+<img src="./images/gradient.png" alt="Algorithm Challenge" width="1000" align="center" style="margin: 0 auto" />
 
 - [Algorithm Challenge ](#algorithm-challenge-)
   - [Table of Contents](#table-of-contents)
