@@ -2,10 +2,12 @@
 
 A very good place to practice algorithms is [LeetCode](https://leetcode.com) - this exercise contains practice challenges similar to the problems found on LeetCode.
 
-## Table of Contents
+## Table of Contents <div style="background: url('./images/gradient.png') no-repeat center center; background-size: cover; width: 150px; height: 150px;">
+
+</div>
 
 - [Algorithm Challenge ](#algorithm-challenge-)
-  - [Table of Contents](#table-of-contents)
+  - [Table of Contents ](#table-of-contents-)
   - [Challenge 1: Reverse a String](#challenge-1-reverse-a-string)
   - [Challenge 2: Validate a Palindrome](#challenge-2-validate-a-palindrome)
   - [Challenge 3: Reverse an Integer](#challenge-3-reverse-an-integer)
@@ -52,7 +54,7 @@ isPalindrome("hello") === false;
 reverseInt(521) === 125;
 ```
 
-## Challenge 4: Capitalize Letters <img src="./images/gradient.png" alt="Algorithm Challenge" width="150" style="margin-left: 10px;" />
+## Challenge 4: Capitalize Letters <img src="./images/ted.png" alt="Algorithm Challenge" width="25" style="background: cover;" />
 
 ```javascript
 // Return a string with the first letter of every word capitalized
