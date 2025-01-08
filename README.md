@@ -1,12 +1,10 @@
-# Algorithm Challenge
-
-<div style="text-align: center;"><img src="./images/4-small.png" alt="Algorithm Challenge" style="width: 100px " /></div>
+# Algorithm Challenge <img src="./images/4-small.png" alt="Algorithm Challenge" style="width: 100px " />
 
 A very good place to practice algorithms is [LeetCode](https://leetcode.com) - this exercise contains practice challenges similar to the problems found on LeetCode.
 
 ## Table of Contents
 
-- [Algorithm Challenge](#algorithm-challenge)
+- [Algorithm Challenge ](#algorithm-challenge-)
   - [Table of Contents](#table-of-contents)
   - [Challenge 1: Reverse a String](#challenge-1-reverse-a-string)
   - [Challenge 2: Validate a Palindrome](#challenge-2-validate-a-palindrome)
