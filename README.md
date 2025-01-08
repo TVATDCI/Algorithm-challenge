@@ -1,6 +1,6 @@
 # Algorithm Challenge
 
-![Algorithm Challenge](https://example.com/header-image.png)
+![Algorithm Challenge](./images/gradient.png)
 
 A very good place to practice algorithms is [LeetCode](https://leetcode.com) - this exercise contains practice challenges similar to the problems found on LeetCode.
 
@@ -25,7 +25,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 
 ## Challenge 1: Reverse a String
 
-![Reverse a String](https://example.com/reverse-string-diagram.png)
+![Reverse a String](./images/reverse-string-diagram.png)
 
 ```javascript
 // Return a string in reverse
@@ -35,7 +35,7 @@ reverseString("hello") === "olleh";
 
 ## Challenge 2: Validate a Palindrome
 
-![Validate a Palindrome](https://example.com/palindrome-diagram.png)
+![Validate a Palindrome](./images/palindrome-diagram.png)
 
 ```javascript
 // Return true if palindrome and false if not
@@ -46,7 +46,7 @@ isPalindrome("hello") === false;
 
 ## Challenge 3: Reverse an Integer
 
-![Reverse an Integer](https://example.com/reverse-integer-diagram.png)
+![Reverse an Integer](./images/reverse-integer-diagram.png)
 
 ```javascript
 // Return an integer in reverse
@@ -56,7 +56,7 @@ reverseInt(521) === 125;
 
 ## Challenge 4: Capitalize Letters
 
-![Capitalize Letters](https://example.com/capitalize-letters-diagram.png)
+![Capitalize Letters](./images/capitalize-letters-diagram.png)
 
 ```javascript
 // Return a string with the first letter of every word capitalized
@@ -66,7 +66,7 @@ capitalizeLetters("i love javascript") === "I Love Javascript";
 
 ## Challenge 5: Max Character
 
-![Max Character](https://example.com/max-character-diagram.png)
+![Max Character](./images/max-character-diagram.png)
 
 ```javascript
 // Return the character that is most common in a string
@@ -76,7 +76,7 @@ maxCharacter("javascript") === "a";
 
 ## Challenge 6: FizzBuzz
 
-![FizzBuzz](https://example.com/fizzbuzz-diagram.png)
+![FizzBuzz](./images/fizzbuzz-diagram.png)
 
 ```javascript
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
@@ -84,7 +84,7 @@ maxCharacter("javascript") === "a";
 
 ## Challenge 7: Longest Word
 
-![Longest Word](https://example.com/longest-word-diagram.png)
+![Longest Word](./images/longest-word-diagram.png)
 
 ```javascript
 // Return the longest word of a string
@@ -99,7 +99,7 @@ longestWord("Brad") === "brad";
 
 ## Challenge 8: Array Chunking
 
-![Array Chunking](https://example.com/array-chunking-diagram.png)
+![Array Chunking](./images/array-chunking-diagram.png)
 
 ```javascript
 // Split an array into chunked arrays of a specific length
@@ -110,7 +110,7 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 
 ## Challenge 9: Flatten Array
 
-![Flatten Array](https://example.com/flatten-array-diagram.png)
+![Flatten Array](./images/flatten-array-diagram.png)
 
 ```javascript
 // Take an array of arrays and flatten to a single array
@@ -120,7 +120,7 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 
 ## Challenge 10: Anagram
 
-![Anagram](https://example.com/anagram-diagram.png)
+![Anagram](./images/anagram-diagram.png)
 
 ```javascript
 // Return true if anagram and false if not
@@ -131,7 +131,7 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 
 ## Challenge 11: Add All Numbers
 
-![Add All Numbers](https://example.com/add-all-numbers-diagram.png)
+![Add All Numbers](./images/add-all-numbers-diagram.png)
 
 ```javascript
 // Return a sum of all parameters entered regardless of the amount of numbers
@@ -141,7 +141,7 @@ addAll(2, 5, 6, 7) === 20;
 
 ## Challenge 12: Sum All Primes
 
-![Sum All Primes](https://example.com/sum-all-primes-diagram.png)
+![Sum All Primes](./images/sum-all-primes-diagram.png)
 
 ```javascript
 // Pass in a number to loop up to and add all of the prime numbers. A prime number is a whole number greater than 1 whose only factors are 1 and itself
@@ -151,7 +151,7 @@ sumAllPrimes(10) === 17;
 
 ## Challenge 13: Seek and Destroy
 
-![Seek and Destroy](https://example.com/seek-and-destroy-diagram.png)
+![Seek and Destroy](./images/seek-and-destroy-diagram.png)
 
 ```javascript
 // Remove from the array whatever is in the following arguments. Return the leftover numbers in an array
@@ -161,7 +161,7 @@ seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6) === [3, 4, "hello"];
 
 ## Challenge 14: Even & Odd Sums
 
-![Even & Odd Sums](https://example.com/even-odd-sums-diagram.png)
+![Even & Odd Sums](./images/even-odd-sums-diagram.png)
 
 ```javascript
 // Take in an array and return an array of the sums of even and odd numbers
