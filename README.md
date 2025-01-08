@@ -52,7 +52,7 @@ isPalindrome("hello") === false;
 reverseInt(521) === 125;
 ```
 
-## Challenge 4: Capitalize Letters <img src="./images/gradient.png" alt="Algorithm Challenge" width="100" style="margin-left: 10px;" />
+## Challenge 4: Capitalize Letters <img src="./images/gradient.png" alt="Algorithm Challenge" width="150" style="margin-left: 10px;" />
 
 ```javascript
 // Return a string with the first letter of every word capitalized
