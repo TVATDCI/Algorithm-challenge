@@ -1,4 +1,4 @@
-# Algorithm Challenge <img src="./images/4-small.png" alt="Algorithm Challenge" style="width: 100px; float: right; margin-left: 10px;" />
+# Algorithm Challenge <img src="./images/4-small.png" alt="Algorithm Challenge" width="100" align="right" style="margin-left: 10px;" />
 
 A very good place to practice algorithms is [LeetCode](https://leetcode.com) - this exercise contains practice challenges similar to the problems found on LeetCode.
 
