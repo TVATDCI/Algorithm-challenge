@@ -54,7 +54,7 @@ reverseInt(521) === 125;
 
 ## Challenge 4: Capitalize Letters
 
-![Capitalize Letters](./images/capitalize-letters-diagram.png)
+![Capitalize Letters]<img src="./images/gradient.png.png" alt="Algorithm Challenge" width="50" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return a string with the first letter of every word capitalized
