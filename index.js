@@ -121,3 +121,47 @@ console.log(isPalindromeX("racecar")); // true
 console.log(isPalindromeX("hello")); // false
 
 console.log("\n-------------------\n");
+
+console.log("Task 3: Reverse an Integer");
+// ### CHALLENGE 3: REVERSE AN INTEGER
+
+console.log(" Task 3: Solution 1");
+// SOLUTION 1
+console.log(" Task 3: Solution 1");
+function reverseIntX(int) {
+  // Let's handle the negative numbers
+  const sign = Math.sign(int); // Math.sign() returns the sign of a number, indicating whether the number is positive, negative, or zero.
+  // Convert the integer to a string, split the string into an array, reverse the array, and join the array back into a string.
+  const reverseString = int.toString().split("").reverse().join("");
+  // Convert the string back to an integer and multiply it by the sign.
+  return parseInt(reverseString) * sign;
+}
+
+console.log(reverseIntX(521) === 125); // true
+
+// SOLUTION 2
+console.log(" Task 3: Solution 2");
+// Use the parseInt() function to convert the integer to a string, split the string into an array, reverse the array, and join the array back into a string.
+function reverseInt(int) {
+  return parseInt(int.toString().split("").reverse().join("")) * Math.sign(int);
+}
+
+console.log(reverseInt(521) === 125); // true
+
+// SOLUTION 3
+console.log(" Task 3: Solution 3");
+
+function reverseIntAbs(num) {
+  const numSign = Math.sign(num);
+  const strNumAbs = Math.abs(num).toString();
+  return parseInt(strNumAbs.split("").reverse().join("")) * numSign;
+}
+
+console.log(reverseIntAbs(521) === 125); // true
+// Solution 3 is more or less the same as solution 2, but this time, we use the Math.abs() function to return the absolute value of a number. I will need to find more use cases for the Math.abs() function. To be continued...
+// * The Math.abs() function returns the absolute value of a number, which is the number without its sign.
+
+// // Return an integer in reverse
+// // ex:
+// reverseInt(521) === 125;
+console.log("\n-------------------\n");
