@@ -1,5 +1,5 @@
 $$
-{\color{red}Algorithm \space \color{lightblue}Challenge}
+{\color{red}Algorithm \space 🔱  \space \color{lightblue}Challenge}
 $$
 
 <img src="./images/4-small.png" alt="Algorithm Challenge" width="50" align="right" style="margin-left: 10px;" />
