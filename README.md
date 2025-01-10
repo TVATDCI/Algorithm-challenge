@@ -6,11 +6,11 @@ $$
 
 A very good place to practice algorithms is [LeetCode](https://leetcode.com) - this exercise contains practice challenges similar to the problems found on LeetCode.
 
-## Table of Contents <img src="./images/alien.svg" alt="Table of Content" width="50" align="center" style="margin: 0 auto" />
+## Table of Contents 🏽 🏼 🏻 <img src="./images/alien.svg" alt="Table of Content" width="50" align="right" style="margin-left: 10px" /> 🏿 🏾
 
-- [Table of Contents ](#table-of-contents-)
+- [Table of Contents � 🏼 🏻 🏿 🏾](#table-of-contents-------)
 - [Challenge 1: Reverse a String ](#challenge-1-reverse-a-string-)
-- [Challenge 2: Validate a Palindrome 🏿 🏾 🏽 🏼 🏻](#challenge-2-validate-a-palindrome-----)
+- [Challenge 2: Validate a Palindrome](#challenge-2-validate-a-palindrome)
 - [Challenge 3: Reverse an Integer ](#challenge-3-reverse-an-integer-)
 - [Challenge 4: Capitalize Letters ](#challenge-4-capitalize-letters-)
 - [Challenge 5: Max Character](#challenge-5-max-character)
@@ -32,7 +32,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 reverseString("hello") === "olleh";
 ```
 
-## Challenge 2: Validate a Palindrome 🏿 🏾 🏽 🏼 🏻
+## Challenge 2: Validate a Palindrome
 
 ![Validate a Palindrome](./images/palindrome-diagram.png)
 
