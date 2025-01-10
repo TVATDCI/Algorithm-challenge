@@ -9,7 +9,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 ## Table of Contents <img src="./images/alien.svg" alt="Table of Content" width="50" align="center" style="margin: 0 auto" />
 
 - [Table of Contents ](#table-of-contents-)
-- [Challenge 1: Reverse a String](#challenge-1-reverse-a-string)
+- [Challenge 1: Reverse a String ](#challenge-1-reverse-a-string-)
 - [Challenge 2: Validate a Palindrome 🏿 🏾 🏽 🏼 🏻](#challenge-2-validate-a-palindrome-----)
 - [Challenge 3: Reverse an Integer ](#challenge-3-reverse-an-integer-)
 - [Challenge 4: Capitalize Letters ](#challenge-4-capitalize-letters-)
@@ -24,7 +24,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 13: Seek and Destroy](#challenge-13-seek-and-destroy)
 - [Challenge 14: Even \& Odd Sums](#challenge-14-even--odd-sums)
 
-## Challenge 1: Reverse a String
+## Challenge 1: Reverse a String <img src="./images/reversed-black.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return a string in reverse
@@ -43,9 +43,7 @@ isPalindrome("racecar") === true;
 isPalindrome("hello") === false;
 ```
 
-## Challenge 3: Reverse an Integer <img src="./images/reversed-greay.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
-
-![Reverse an Integer](./images/reverse-integer-diagram.png)
+## Challenge 3: Reverse an Integer <img src="./images/reversed-grey.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return an integer in reverse
@@ -53,7 +51,7 @@ isPalindrome("hello") === false;
 reverseInt(521) === 125;
 ```
 
-## Challenge 4: Capitalize Letters <img src="./images/capitalized.svg.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
+## Challenge 4: Capitalize Letters <img src="./images/capitalized.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return a string with the first letter of every word capitalized
