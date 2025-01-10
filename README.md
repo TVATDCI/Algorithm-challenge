@@ -113,7 +113,7 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 [[1, 2], [3, 4], [5, 6], [7]] === [1, 2, 3, 4, 5, 6, 7];
 ```
 
-## Challenge 10: Anagram <img src="./images/barrier.svg.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
+## Challenge 10: Anagram <img src="./images/barrier.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return true if anagram and false if not
