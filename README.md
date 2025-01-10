@@ -11,7 +11,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-## Table of Contents 🏽 🏼 🏻 🏿 🏾 <img src="./images/alien.svg" alt="Table of Content" width="50" align="right" style="margin-left: 10px" />
+## Table of Contents 🏽 🏼 🏻 🏿 🏾 <img src="./images/alien-green.svg" alt="Table of Content" width="50" align="right" style="margin-left: 10px" />
 
 - [Algorithm Challenges](#algorithm-challenges)
   - [Table of Contents 🏽 🏼 🏻 🏿 🏾 ](#table-of-contents------)
