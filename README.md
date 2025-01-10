@@ -18,7 +18,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 7: Longest Word](#challenge-7-longest-word)
 - [Challenge 8: Array Chunking](#challenge-8-array-chunking)
 - [Challenge 9: Flatten Array](#challenge-9-flatten-array)
-- [Challenge 10: Anagram](#challenge-10-anagram)
+- [Challenge 10: Anagram ](#challenge-10-anagram-)
 - [Challenge 11: Add All Numbers](#challenge-11-add-all-numbers)
 - [Challenge 12: Sum All Primes](#challenge-12-sum-all-primes)
 - [Challenge 13: Seek and Destroy](#challenge-13-seek-and-destroy)
@@ -113,9 +113,7 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 [[1, 2], [3, 4], [5, 6], [7]] === [1, 2, 3, 4, 5, 6, 7];
 ```
 
-## Challenge 10: Anagram
-
-![Anagram](./images/anagram-diagram.png)
+## Challenge 10: Anagram <img src="./images/barrier.svg.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return true if anagram and false if not
