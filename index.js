@@ -211,3 +211,69 @@ console.log(
 );
 console.log("\n-------------------\n");
 // capitalizeLetters('i love javascript') === 'I Love Javascript';
+
+console.log("Task 5: Max Character");
+// ### CHALLENGE 5: MAX CHARACTER
+console.log(" Task 5: Solution 1");
+
+function maxCharacter(str) {
+  const charCount = {}; // Create an object to store the character count!
+  for (let char of str) {
+    charCount[char] = (charCount[char] || 0) + 1; // Increment the character count!
+  }
+  // Get the character with the highest count!
+  let maxChar = "";
+  let maxCount = 0;
+  for (let char in charCount) {
+    if (charCount[char] > maxCount) {
+      maxChar = char;
+      maxCount = charCount[char];
+    }
+  }
+  return maxChar;
+}
+
+console.log(maxCharacter("javascript") === "a"); // true
+/** The logic of the code is as follows:
+ * * Create an object to store the character count.
+ * * Loop through the string and increment the character count.
+ * * Get the character with the highest count.
+ * * Return the character with the highest count.
+ * How to method:
+ * Store the character count in an object. Use a for...of loop to iterate over the string and increment the character count.
+ * Use a for...in loop to get the character with the highest count.
+ * Return the character with the highest count.(maxChar)
+ * * FUN FACT! why is (maxCharacter("javascript") === "a") true?
+ * * Because the character "a" is the most common character in the string "javascript".
+ * a = 2 That is why the function returns "a" or true, it is the most common character in the string!!
+ */
+// SOLUTION 2
+console.log(" Task 5: Solution 2");
+const maxCharacterX = (str) => {
+  const charCount = {};
+  for (let char of str) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  let maxChar = ""; // Initialize the maxChar variable to an empty string.
+  let maxCount = 0; // Initialize the maxCount variable to 0.
+
+  for (let char in charCount) {
+    if (charCount[char] > maxCount) {
+      maxChar = char;
+      maxCount = charCount[char];
+    }
+  }
+
+  return maxChar;
+};
+
+console.log(maxCharacterX("javascript") === "a"); // true
+
+// * Not much difference between the two solutions, just an arrow function, written differently!
+
+// // Return the character that is most common in a string
+// // ex:
+// maxCharacter('javascript') == 'a';
+
+console.log("\n-------------------\n");
