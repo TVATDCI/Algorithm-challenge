@@ -9,18 +9,18 @@
     }
 
     .wave {
-      animation: wave 3s linear infinite;
+      animation: wave 8s linear infinite;
     }
 
     #wave2 {
       animation-duration: 6s;
       animation-direction: reverse;
-      opacity: 0.9;
+      opacity: 0.5;
     }
 
     #wave3 {
       animation-duration: 3s;
-      opacity: 0.5;
+      opacity: 0.3;
     }
 
     @keyframes wave {
