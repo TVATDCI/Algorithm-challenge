@@ -5,6 +5,7 @@ $$
 <img src="./images/4-small.png" alt="Algorithm Challenge" width="50" align="right" style="margin-left: 10px;" />
 
 A very good place to practice algorithms is [LeetCode](https://leetcode.com) - this exercise contains practice challenges similar to the problems found on LeetCode.
+![](images/gradientWave.svg)
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
