@@ -165,3 +165,49 @@ console.log(reverseIntAbs(521) === 125); // true
 // // ex:
 // reverseInt(521) === 125;
 console.log("\n-------------------\n");
+
+console.log("Challenge 4: Capitalize Letters");
+// ### CHALLENGE 4: CAPITALIZE LETTERS
+// // Return a string with the first letter of every word capitalized
+// //  ex:
+console.log(" Task 4: Solution 1");
+function capitalizeLetters(str) {
+  const strArr = str.toLowerCase().split(" ");
+  return strArr.map((word) => word[0].toUpperCase() + word.substr(1)).join(" ");
+}
+
+console.log(capitalizeLetters("i love javascript") === "I Love Javascript"); // true
+
+// SOLUTION 2
+console.log(" Task 4: Solution 2");
+function capitalizeLettersX(str) {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.substr(1))
+    .join(" ");
+}
+
+console.log(capitalizeLettersX("i love javascript") === "I Love Javascript"); // true
+
+// SOLUTION 3
+console.log(" Task 4: Solution 3");
+const capitalizeLettersNinja = (str) => {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.substr(1))
+    .join(" ");
+};
+
+console.log(
+  capitalizeLettersNinja("i love javascript") === "I Love Javascript"
+); // true
+// * The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+// * The substr() method returns the characters in a string beginning at the specified location through the specified number of characters.
+// * The toUpperCase() method returns the calling string value converted to uppercase (the value will be converted to a string if it isn't one).
+console.log(
+  "\nThe 3 solutions use more or less the same methods, just written differently!  \n"
+);
+console.log("\n-------------------\n");
+// capitalizeLetters('i love javascript') === 'I Love Javascript';
