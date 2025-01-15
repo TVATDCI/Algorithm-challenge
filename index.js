@@ -277,3 +277,51 @@ console.log(maxCharacterX("javascript") === "a"); // true
 // maxCharacter('javascript') == 'a';
 
 console.log("\n-------------------\n");
+console.log("Task 6: FizzBuzz");
+// ### CHALLENGE 6: FIZZBUZZ
+// Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
+// SOLUTION 1 - Classic
+console.log(" Task 6: Solution 1");
+function fizzBuzz() {
+  for (let i = 1; i <= 100; i++) {
+    if (i % 15 === 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log("Fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+fizzBuzz(); // * Don't forget to call the function!!!#
+
+// SOLUTION 2 - Arrow Function + Ternary Operator
+/*console.log(" Task 6: Solution 2");
+
+const fizzBuzzX = () => {
+  for (let i = 1; i <= 100; i++) {
+    console.log(
+      i % 15 === 0
+        ? "FizzBuzz"
+        : i % 3 === 0
+        ? "Fizz"
+        : i % 5 === 0
+        ? "Buzz"
+        : i
+    );
+  }
+};
+
+fizzBuzzX();
+*/
+
+// * The ternary operator is a shorthand way of writing an if...else statement. It consists of a condition followed by a question mark (?), then an expression to execute if the condition is true, followed by a colon (:), and an expression to execute
+// * if the condition is false. The ternary operator is used to simplify the code and make it more concise.
+
+console.log("\n-------------------)n");
+
+console.log("Task 7: Longest Word");
+console.log("I am not yet, done!?");
