@@ -20,7 +20,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 3: Reverse an Integer ](#challenge-3-reverse-an-integer-)
 - [Challenge 4: Capitalize Letters ](#challenge-4-capitalize-letters-)
 - [Challenge 5: Max Character](#challenge-5-max-character)
-- [Challenge 6: FizzBuzz](#challenge-6-fizzbuzz)
+- [Challenge 6: FizzBuzz ](#challenge-6-fizzbuzz-)
 - [Challenge 7: Longest Word](#challenge-7-longest-word)
 - [Challenge 8: Array Chunking](#challenge-8-array-chunking)
 - [Challenge 9: Flatten Array](#challenge-9-flatten-array)
@@ -88,9 +88,7 @@ capitalizeLetters("i love javascript") === "I Love Javascript";
 maxCharacter("javascript") === "a";
 ```
 
-## Challenge 6: FizzBuzz
-
-![FizzBuzz](./images/fizzbuzz-diagram.png)
+## Challenge 6: FizzBuzz <img src="./images/curve.png" alt="Algorithm Challenge" width="50" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
