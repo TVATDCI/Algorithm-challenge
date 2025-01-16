@@ -324,4 +324,80 @@ fizzBuzzX();
 console.log("\n-------------------)n");
 
 console.log("Task 7: Longest Word");
-console.log("I am not yet, done!?");
+// #### CHALLENGE 7: LONGEST WORD
+// * Return the longest word(s) in a given string.
+// SOLUTION 1 - Return a single longest word
+console.log(" Task 7: Solution 1");
+
+function longestWord(str) {
+  // Step 1: Remove punctuation using regex and split the string into an array of words.
+  const words = str.replace(/[^a-zA-Z ]/g, "").split(" ");
+
+  // Step 2: Sort the array by word length in descending order.
+  const sortedWords = words.sort((a, b) => b.length - a.length);
+
+  // Step 3: Return the first word, which is the longest due to the sorting.
+  return sortedWords[0];
+}
+
+console.log(longestWord("Hi there, my name is Brad")); // "there"
+console.log(longestWord("My name is Brad")); // "name"
+console.log(longestWord("Brad")); // "Brad"
+
+// Learning Point:
+// 1. `replace(/[^a-zA-Z ]/g, "")` ensures only letters and spaces are kept, removing punctuation.
+// 2. Sorting the array by length (`b.length - a.length`) ensures the longest word appears first.
+// 3. Returning the first element of the sorted array gives the longest word.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 2 - Return an array if multiple words have the same length
+console.log(" Task 7: Solution 2");
+
+function longestWordArray(str) {
+  // Step 1: Clean and split the string into an array of words.
+  const words = str.replace(/[^a-zA-Z ]/g, "").split(" ");
+
+  // Step 2: Find the length of the longest word.
+  const maxLength = Math.max(...words.map((word) => word.length));
+
+  // Step 3: Filter the array to include only words that match the max length.
+  return words.filter((word) => word.length === maxLength);
+}
+
+console.log(longestWordArray("Hi there, my name is Brad")); // ["there"]
+console.log(longestWordArray("My name is Brad")); // ["name", "Brad"]
+console.log(longestWordArray("Brad")); // ["Brad"]
+
+// Learning Point:
+// 1. `Math.max(...words.map(word => word.length))` extracts the longest length efficiently.
+// 2. `filter` is used to return all words matching the longest length.
+// 3. This approach ensures that multiple words of the same length are returned in an array.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 3 - Only return an array if there are multiple words, otherwise return a single word
+console.log(" Task 7: Solution 3");
+
+function longestWordSmart(str) {
+  // Step 1: Clean and split the string into an array of words.
+  const words = str.replace(/[^a-zA-Z ]/g, "").split(" ");
+
+  // Step 2: Find the length of the longest word.
+  const maxLength = Math.max(...words.map((word) => word.length));
+
+  // Step 3: Filter the array to include only words that match the max length.
+  const longestWords = words.filter((word) => word.length === maxLength);
+
+  // Step 4: Return the array if there are multiple words; otherwise, return the single word as a string.
+  return longestWords.length > 1 ? longestWords : longestWords[0];
+}
+
+console.log(longestWordSmart("Hi there, my name is Brad")); // "there"
+console.log(longestWordSmart("My name is Brad")); // ["name", "Brad"]
+console.log(longestWordSmart("Brad")); // "Brad"
+
+// Learning Point:
+// 1. This combines the logic from both previous solutions for flexibility.
+// 2. A conditional (`longestWords.length > 1`) determines whether to return an array or a single word.
+// 3. Efficiently handles cases where only one word is the longest.
