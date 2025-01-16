@@ -401,3 +401,101 @@ console.log(longestWordSmart("Brad")); // "Brad"
 // 1. This combines the logic from both previous solutions for flexibility.
 // 2. A conditional (`longestWords.length > 1`) determines whether to return an array or a single word.
 // 3. Efficiently handles cases where only one word is the longest.
+// #### CHALLENGE 8: ARRAY CHUNKING
+// * Split an array into chunked arrays of a specific length.
+
+// SOLUTION 1 - Using a for loop
+console.log(" Task 8: Solution 1");
+
+function chunkArray(arr, size) {
+  // Initialize an empty array to hold the chunks.
+  const chunked = [];
+
+  // Iterate through the array, incrementing by the chunk size.
+  for (let i = 0; i < arr.length; i += size) {
+    // Use `slice` to get a subarray of length `size` and push it to `chunked`.
+    chunked.push(arr.slice(i, i + size));
+  }
+
+  // Return the chunked array.
+  return chunked;
+}
+
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 3)); // [[1, 2, 3], [4, 5, 6], [7]]
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 2)); // [[1, 2], [3, 4], [5, 6], [7]]
+
+// Learning Point:
+// 1. The `for` loop iterates through the array in steps of `size`.
+// 2. `slice(i, i + size)` extracts the subarray of the given chunk size.
+// 3. This method is simple and efficient for creating chunks.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 2 - Using a while loop and splice
+console.log(" Task 8: Solution 2");
+
+function chunkArrayWhile(arr, size) {
+  // Initialize an empty array to hold the chunks.
+  const chunked = [];
+
+  // While the array still has elements:
+  while (arr.length > 0) {
+    // Use `splice` to remove the first `size` elements and push them to `chunked`.
+    chunked.push(arr.splice(0, size));
+  }
+
+  // Return the chunked array.
+  return chunked;
+}
+
+console.log(chunkArrayWhile([1, 2, 3, 4, 5, 6, 7], 3)); // [[1, 2, 3], [4, 5, 6], [7]]
+console.log(chunkArrayWhile([1, 2, 3, 4, 5, 6, 7], 2)); // [[1, 2], [3, 4], [5, 6], [7]]
+
+// Learning Point:
+// 1. `splice(0, size)` removes and returns the first `size` elements of the array.
+// 2. The while loop continues until all elements are removed from the array.
+// 3. This method modifies the original array, so use caution if you need the original array intact.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 3 - Using Array.from()
+console.log(" Task 8: Solution 3");
+
+function chunkArrayFrom(arr, size) {
+  // Use `Array.from()` to create a new array, with the length determined by `Math.ceil(arr.length / size)`.
+  return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    arr.slice(i * size, i * size + size)
+  );
+}
+
+console.log(chunkArrayFrom([1, 2, 3, 4, 5, 6, 7], 3)); // [[1, 2, 3], [4, 5, 6], [7]]
+console.log(chunkArrayFrom([1, 2, 3, 4, 5, 6, 7], 2)); // [[1, 2], [3, 4], [5, 6], [7]]
+
+// Learning Point:
+// 1. `Array.from()` creates a new array where each element is computed based on a mapping function.
+// 2. The mapping function uses `slice` to create chunks based on the index.
+// 3. This method is concise and avoids modifying the original array.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 4 - Using a reducer
+console.log(" Task 8: Solution 4");
+
+function chunkArrayReducer(arr, size) {
+  // Use `reduce` to build the chunked array.
+  return arr.reduce((acc, _, i) => {
+    // Only process indices that are multiples of `size`.
+    if (i % size === 0) {
+      acc.push(arr.slice(i, i + size));
+    }
+    return acc;
+  }, []);
+}
+
+console.log(chunkArrayReducer([1, 2, 3, 4, 5, 6, 7], 3)); // [[1, 2, 3], [4, 5, 6], [7]]
+console.log(chunkArrayReducer([1, 2, 3, 4, 5, 6, 7], 2)); // [[1, 2], [3, 4], [5, 6], [7]]
+
+// Learning Point:
+// 1. `reduce` iterates through the array and builds the result step-by-step.
+// 2. `slice` is called only when the current index is a multiple of `size`.
+// 3. This method keeps the code concise and functional.

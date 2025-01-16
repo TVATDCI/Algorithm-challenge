@@ -33,7 +33,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 
 ## Introduction
 
-This repository contains a collection of algorithm challenges designed to improve your problem-solving skills. Each challenge includes a description and example code to help you get started.
+This repository contains a collection of algorithm challenges designed to help you improve your JavaScript skills. Each challenge includes a brief description and an example to illustrate the expected output. Whether you are a beginner or an experienced developer, these challenges will help you practice and enhance your problem-solving abilities.
 
 ## Installation
 
