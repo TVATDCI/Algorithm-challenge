@@ -23,7 +23,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 6: FizzBuzz ](#challenge-6-fizzbuzz-)
 - [Challenge 7: Longest Word](#challenge-7-longest-word)
 - [Challenge 8: Array Chunking](#challenge-8-array-chunking)
-- [Challenge 9: Flatten Array](#challenge-9-flatten-array)
+- [Challenge 9: Flatten Array ](#challenge-9-flatten-array-)
 - [Challenge 10: Anagram ](#challenge-10-anagram-)
 - [Challenge 11: Add All Numbers](#challenge-11-add-all-numbers)
 - [Challenge 12: Sum All Primes](#challenge-12-sum-all-primes)
@@ -88,7 +88,7 @@ capitalizeLetters("i love javascript") === "I Love Javascript";
 maxCharacter("javascript") === "a";
 ```
 
-## Challenge 6: FizzBuzz <img src="./images/curve.png" alt="Algorithm Challenge" width="100" align="right" style="margin-left: 10px;" />
+## Challenge 6: FizzBuzz <img src="./images/gradient.png" alt="Algorithm Challenge" width="100" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
@@ -120,9 +120,7 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 3) === [[1, 2, 3], [4, 5, 6], [7]];
 chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 ```
 
-## Challenge 9: Flatten Array
-
-![Flatten Array](./images/flatten-array-diagram.png)
+## Challenge 9: Flatten Array <img src="./images/curve.png" alt="Algorithm Challenge" width="100" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Take an array of arrays and flatten to a single array
