@@ -88,7 +88,7 @@ capitalizeLetters("i love javascript") === "I Love Javascript";
 maxCharacter("javascript") === "a";
 ```
 
-## Challenge 6: FizzBuzz <img src="./images/curve.png" alt="Algorithm Challenge" width="50" align="right" style="margin-left: 10px;" />
+## Challenge 6: FizzBuzz <img src="./images/curve.png" alt="Algorithm Challenge" width="100" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
