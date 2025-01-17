@@ -79,7 +79,7 @@ reverseInt(521) === 125;
 capitalizeLetters("i love javascript") === "I Love Javascript";
 ```
 
-## Challenge 5: Max Character <img src="./images/png-1.png" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
+## Challenge 5: Max Character <img src="./images/png-1.png" alt="Algorithm Challenge" width="50" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return the character that is most common in a string
