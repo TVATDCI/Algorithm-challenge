@@ -81,8 +81,6 @@ capitalizeLetters("i love javascript") === "I Love Javascript";
 
 ## Challenge 5: Max Character
 
-![Max Character](<./images/pngegg%20(1).png>)
-
 ```javascript
 // Return the character that is most common in a string
 // ex:
