@@ -1,5 +1,5 @@
 $$
-{\color{red}Algorithm \space 🔱  \space \color{lightblue}Challenge}
+{\color{red}Algorithm \space 🔱  \space \color{lightgreen}Challenge}
 $$
 
 $$
