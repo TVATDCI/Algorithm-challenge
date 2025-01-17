@@ -23,7 +23,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 5: Max Character ](#challenge-5-max-character-)
 - [Challenge 6: FizzBuzz ](#challenge-6-fizzbuzz-)
 - [Challenge 7: Longest Word](#challenge-7-longest-word)
-- [Challenge 8: Array Chunking](#challenge-8-array-chunking)
+- [Challenge 8: Array Chunking ](#challenge-8-array-chunking-)
 - [Challenge 9: Flatten Array ](#challenge-9-flatten-array-)
 - [Challenge 10: Anagram ](#challenge-10-anagram-)
 - [Challenge 11: Add All Numbers](#challenge-11-add-all-numbers)
@@ -108,9 +108,7 @@ longestWord("My name is Brad") === ["name", "brad"];
 longestWord("Brad") === "brad";
 ```
 
-## Challenge 8: Array Chunking
-
-![Array Chunking](./images/array-chunking-diagram.png)
+## Challenge 8: Array Chunking <img src="./images/png-2.png" alt="Algorithm Challenge" width="30" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Split an array into chunked arrays of a specific length
