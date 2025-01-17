@@ -404,8 +404,8 @@ console.log(longestWordSmart("Brad")); // "Brad"
 // #### CHALLENGE 8: ARRAY CHUNKING
 // * Split an array into chunked arrays of a specific length.
 
-// SOLUTION 1 - Using a for loop
 console.log(" Task 8: Solution 1");
+// SOLUTION 1 - Using a for loop
 
 function chunkArray(arr, size) {
   // Initialize an empty array to hold the chunks.
