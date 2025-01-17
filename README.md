@@ -33,7 +33,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 11: Add All Numbers](#challenge-11-add-all-numbers)
 - [Challenge 12: Sum All Primes](#challenge-12-sum-all-primes)
 - [Challenge 13: Seek and Destroy](#challenge-13-seek-and-destroy)
-- [Challenge 14: Even \& Odd Sums](#challenge-14-even--odd-sums)
+- [Challenge 14: Even \& Odd Sums ](#challenge-14-even--odd-sums-)
 
 ## Introduction
 
@@ -108,7 +108,7 @@ longestWord("My name is Brad") === ["name", "brad"];
 longestWord("Brad") === "brad";
 ```
 
-## Challenge 8: Array Chunking <img src="./images/png-2.png" alt="Algorithm Challenge" width="30" align="right" style="margin-left: 10px;" />
+## Challenge 8: Array Chunking <img src="./images/brackets-green.svg" alt="Algorithm Challenge" width="30" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Split an array into chunked arrays of a specific length
@@ -164,9 +164,7 @@ sumAllPrimes(10) === 17;
 seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6) === [3, 4, "hello"];
 ```
 
-## Challenge 14: Even & Odd Sums
-
-![Even & Odd Sums](./images/even-odd-sums-diagram.png)
+## Challenge 14: Even & Odd Sums <img src="./images/png-2.png" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Take in an array and return an array of the sums of even and odd numbers
