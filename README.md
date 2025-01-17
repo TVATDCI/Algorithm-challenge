@@ -22,7 +22,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 4: Capitalize Letters ](#challenge-4-capitalize-letters-)
 - [Challenge 5: Max Character ](#challenge-5-max-character-)
 - [Challenge 6: FizzBuzz ](#challenge-6-fizzbuzz-)
-- [Challenge 7: Longest Word](#challenge-7-longest-word)
+- [Challenge 7: Longest Word ](#challenge-7-longest-word-)
 - [Challenge 8: Array Chunking ](#challenge-8-array-chunking-)
 - [Challenge 9: Flatten Array ](#challenge-9-flatten-array-)
 - [Challenge 10: Anagram ](#challenge-10-anagram-)
@@ -91,9 +91,7 @@ maxCharacter("javascript") === "a";
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
 ```
 
-## Challenge 7: Longest Word
-
-![Longest Word](./images/longest-word-diagram.png)
+## Challenge 7: Longest Word <img src="./images/png-4.png" alt="Algorithm Challenge" width="30" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return the longest word of a string
