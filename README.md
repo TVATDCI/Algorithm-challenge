@@ -2,6 +2,10 @@ $$
 {\color{red}Algorithm \space 🔱  \space \color{lightblue}Challenge}
 $$
 
+$$
+{\color{red}Made \space \color{red} With \space \color{red}❤️ }
+$$
+
 <img src="./images/ted.png" alt="Algorithm Challenge" width="35" align="left" style="margin-left: 10px;" />
 <img src="./images/4-small.png" alt="Algorithm Challenge" width="50" align="right" style="margin-left: 10px;" />
 
@@ -171,5 +175,4 @@ evenOddSums([50, 60, 60, 45, 71]) === [170, 116];
 ```
 
 $$
-{\color{red}Made \space \color{red} With \space \color{red}❤️ }
 $$
