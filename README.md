@@ -17,7 +17,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Challenge 1: Reverse a String ](#challenge-1-reverse-a-string-)
-- [Challenge 2: Validate a Palindrome](#challenge-2-validate-a-palindrome)
+- [Challenge 2: Validate a Palindrome ](#challenge-2-validate-a-palindrome-)
 - [Challenge 3: Reverse an Integer ](#challenge-3-reverse-an-integer-)
 - [Challenge 4: Capitalize Letters ](#challenge-4-capitalize-letters-)
 - [Challenge 5: Max Character ](#challenge-5-max-character-)
@@ -52,9 +52,7 @@ To set up the project locally, follow these steps:
 reverseString("hello") === "olleh";
 ```
 
-## Challenge 2: Validate a Palindrome
-
-![Validate a Palindrome](./images/palindrome-diagram.png)
+## Challenge 2: Validate a Palindrome <img src="./images/png-3.png" alt="Algorithm Challenge" width="30" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return true if palindrome and false if not
