@@ -169,3 +169,7 @@ seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6) === [3, 4, "hello"];
 // ex:
 evenOddSums([50, 60, 60, 45, 71]) === [170, 116];
 ```
+
+$$
+{\color{red}Made \space \color{red} With \space \color{red}❤️ }
+$$
