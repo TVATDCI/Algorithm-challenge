@@ -20,7 +20,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 2: Validate a Palindrome](#challenge-2-validate-a-palindrome)
 - [Challenge 3: Reverse an Integer ](#challenge-3-reverse-an-integer-)
 - [Challenge 4: Capitalize Letters ](#challenge-4-capitalize-letters-)
-- [Challenge 5: Max Character](#challenge-5-max-character)
+- [Challenge 5: Max Character ](#challenge-5-max-character-)
 - [Challenge 6: FizzBuzz ](#challenge-6-fizzbuzz-)
 - [Challenge 7: Longest Word](#challenge-7-longest-word)
 - [Challenge 8: Array Chunking](#challenge-8-array-chunking)
@@ -79,7 +79,7 @@ reverseInt(521) === 125;
 capitalizeLetters("i love javascript") === "I Love Javascript";
 ```
 
-## Challenge 5: Max Character
+## Challenge 5: Max Character <img src="./images/png-1.png" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return the character that is most common in a string
