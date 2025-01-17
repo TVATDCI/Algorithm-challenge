@@ -499,3 +499,116 @@ console.log(chunkArrayReducer([1, 2, 3, 4, 5, 6, 7], 2)); // [[1, 2], [3, 4], [5
 // 1. `reduce` iterates through the array and builds the result step-by-step.
 // 2. `slice` is called only when the current index is a multiple of `size`.
 // 3. This method keeps the code concise and functional.
+
+console.log("\n-------------------\n");
+// #### CHALLENGE 9: FLATTEN ARRAY
+// * Take an array of arrays and flatten it into a single array.
+
+// SOLUTION 1 - Using `Array.prototype.flat`
+console.log(" Task 9: Solution 1");
+
+function flattenArrayFlat(arr) {
+  // Use the `flat` method to flatten one level deep.
+  return arr.flat();
+}
+
+console.log(flattenArrayFlat([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4, 5, 6, 7]
+
+// Learning Point:
+// 1. `flat()` is a built-in method that flattens nested arrays.
+// 2. It defaults to a depth of 1 but can be given deeper levels (e.g., `flat(2)`).
+
+console.log("\n-------------------\n");
+
+// SOLUTION 2 - Using `Array.prototype.concat` with Spread Operator
+console.log(" Task 9: Solution 2");
+
+function flattenArrayConcat(arr) {
+  // Use the spread operator to concatenate subarrays into a single array.
+  return [].concat(...arr);
+}
+
+console.log(flattenArrayConcat([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4, 5, 6, 7]
+
+// Learning Point:
+// 1. The spread operator (`...`) unpacks elements of subarrays.
+// 2. `concat` merges the unpacked elements into a single array.
+// 3. Works well for 1-level deep arrays.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 3 - Using a `for...of` loop
+console.log(" Task 9: Solution 3");
+
+function flattenArrayForLoop(arr) {
+  const flat = [];
+  // Iterate through each subarray and push its elements into `flat`.
+  for (const subarray of arr) {
+    flat.push(...subarray);
+  }
+  return flat;
+}
+
+console.log(flattenArrayForLoop([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4, 5, 6, 7]
+
+// Learning Point:
+// 1. Uses the `for...of` loop to iterate over the outer array.
+// 2. The spread operator (`...`) unpacks the subarray elements into `flat`.
+// 3. Great for manually controlling the process.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 4 - Using `reduce`
+console.log(" Task 9: Solution 4");
+
+function flattenArrayReduce(arr) {
+  // Use `reduce` to accumulate elements into a single array.
+  return arr.reduce((acc, subarray) => acc.concat(subarray), []);
+}
+
+console.log(flattenArrayReduce([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4, 5, 6, 7]
+
+// Learning Point:
+// 1. `reduce` iterates through the array, merging subarrays with `concat`.
+// 2. Keeps the code concise and functional.
+// 3. The empty array (`[]`) is used as the initial value for the accumulator.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 5 - Recursive Flattening
+console.log(" Task 9: Solution 5");
+
+function flattenArrayRecursive(arr) {
+  // Recursively flatten nested arrays.
+  return arr.reduce(
+    (acc, item) =>
+      acc.concat(Array.isArray(item) ? flattenArrayRecursive(item) : item),
+    []
+  );
+}
+
+console.log(flattenArrayRecursive([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4, 5, 6, 7]
+
+// Learning Point:
+// 1. Handles deeply nested arrays by checking if each `item` is an array.
+// 2. Calls itself recursively for nested arrays, flattening them completely.
+// 3. Works for any level of nested arrays, unlike `flat()` or simple methods.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 6 - Using `flatMap` (ES10)
+console.log(" Task 9: Solution 6");
+
+function flattenArrayFlatMap(arr) {
+  // Use `flatMap` to map and flatten the array in one step.
+  return arr.flatMap((subarray) => subarray);
+}
+
+console.log(flattenArrayFlatMap([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4, 5, 6, 7]
+
+// Learning Point:
+// 1. `flatMap` is a combination of `map` and `flat(1)`.
+// 2. Useful if mapping and flattening are both required in the operation.
+// 3. Introduced in ES10 (ECMAScript 2019).
+
+console.log("\n-------------------\n");
