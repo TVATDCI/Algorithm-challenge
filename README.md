@@ -2,6 +2,8 @@ $$
 {\color{red}Algorithm \space 🔱  \space \color{lightgreen}Challenge}
 $$
 
+---
+
 $$
 {\color{red}Made \space \color{red} With \space \color{red}❤️ }
 $$
@@ -17,6 +19,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 
 ## Table of Contents 🏽 🏼 🏻 🏿 🏾<img src="./images/alien-green.svg" alt="Table of Content" width="50" align="right" style="margin-left: 10px" />
 
+- [$$](#)
 - [Table of Contents 🏽 🏼 🏻 🏿 🏾](#table-of-contents-----)
 - [Introduction](#introduction)
 - [Installation](#installation)
