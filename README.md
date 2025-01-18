@@ -30,7 +30,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 8: Array Chunking ](#challenge-8-array-chunking-)
 - [Challenge 9: Flatten Array ](#challenge-9-flatten-array-)
 - [Challenge 10: Anagram ](#challenge-10-anagram-)
-- [Challenge 11: Add All Numbers](#challenge-11-add-all-numbers)
+- [Challenge 11: Add All Numbers ](#challenge-11-add-all-numbers-)
 - [Challenge 12: Sum All Primes](#challenge-12-sum-all-primes)
 - [Challenge 13: Seek and Destroy](#challenge-13-seek-and-destroy)
 - [Challenge 14: Even \& Odd Sums ](#challenge-14-even--odd-sums-)
@@ -134,9 +134,7 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 "Dormitory" === "dirty room##";
 ```
 
-## Challenge 11: Add All Numbers
-
-![Add All Numbers](./images/add-all-numbers-diagram.png)
+## Challenge 11: Add All Numbers <img src="./images/abacus.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Return a sum of all parameters entered regardless of the amount of numbers
