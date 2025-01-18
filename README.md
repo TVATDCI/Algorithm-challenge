@@ -174,5 +174,3 @@ evenOddSums([50, 60, 60, 45, 71]) === [170, 116];
 
 $$
 $$
-
-<i class="fa fa-angle-right" aria-hidden="true"></i>
