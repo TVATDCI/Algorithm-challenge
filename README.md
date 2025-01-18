@@ -67,6 +67,8 @@ isPalindrome("racecar") === true;
 isPalindrome("hello") === false;
 ```
 
+**Explanation:** This challenge requires you to write a function that takes an integer as input and returns the integer with its digits reversed. For example, if the input is 521, the output should be 125.
+
 ## Challenge 3: Reverse an Integer <img src="./images/reversed-grey.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
