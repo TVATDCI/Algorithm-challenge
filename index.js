@@ -612,3 +612,134 @@ console.log(flattenArrayFlatMap([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4,
 // 3. Introduced in ES10 (ECMAScript 2019).
 
 console.log("\n-------------------\n");
+
+// #### CHALLENGE 10: ANAGRAM
+// * Return true if the two strings are anagrams, false if not.
+
+// SOLUTION 1 - Clean and Sort Approach
+console.log(" Task 10: Solution 1");
+
+function isAnagramSort(str1, str2) {
+  const formatStr = (str) =>
+    str
+      .replace(/[^\w]/g, "") // Remove non-alphanumeric characters
+      .toLowerCase() // Convert to lowercase
+      .split("") // Convert to array
+      .sort() // Sort alphabetically
+      .join(""); // Rejoin to string
+
+  return formatStr(str1) === formatStr(str2);
+}
+
+console.log(isAnagramSort("anagram", "nagaram")); // true
+console.log(isAnagramSort("Dormitory", "dirty room##")); // true
+console.log(isAnagramSort("hello", "world")); // false
+
+// Learning Point:
+// 1. Remove non-alphanumeric characters with `replace(/[^\w]/g, '')`.
+// 2. Convert to lowercase to make the comparison case-insensitive.
+// 3. Sort the strings and compare them directly.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 2 - Character Map Approach
+console.log(" Task 10: Solution 2");
+
+function isAnagramMap(str1, str2) {
+  const createCharMap = (str) => {
+    const charMap = {};
+    for (let char of str.replace(/[^\w]/g, "").toLowerCase()) {
+      charMap[char] = (charMap[char] || 0) + 1; // Count occurrences of each character
+    }
+    return charMap;
+  };
+
+  const charMap1 = createCharMap(str1);
+  const charMap2 = createCharMap(str2);
+
+  // Compare character maps
+  if (Object.keys(charMap1).length !== Object.keys(charMap2).length) {
+    return false;
+  }
+
+  for (let char in charMap1) {
+    if (charMap1[char] !== charMap2[char]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+console.log(isAnagramMap("anagram", "nagaram")); // true
+console.log(isAnagramMap("Dormitory", "dirty room##")); // true
+console.log(isAnagramMap("hello", "world")); // false
+
+// Learning Point:
+// 1. Build a character map for each string.
+// 2. Compare the keys and values in the maps to determine if the strings are anagrams.
+// 3. Handles the problem in O(n) time complexity, avoiding sorting.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 3 - Frequency Counter Approach
+console.log(" Task 10: Solution 3");
+
+function isAnagramFrequency(str1, str2) {
+  const normalize = (str) => str.replace(/[^\w]/g, "").toLowerCase();
+
+  const str1Normalized = normalize(str1);
+  const str2Normalized = normalize(str2);
+
+  if (str1Normalized.length !== str2Normalized.length) {
+    return false; // Early return if lengths differ
+  }
+
+  const charCount = {};
+
+  // Count characters in the first string
+  for (let char of str1Normalized) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  // Compare counts with the second string
+  for (let char of str2Normalized) {
+    if (!charCount[char]) {
+      return false;
+    }
+    charCount[char]--;
+  }
+
+  return true;
+}
+
+console.log(isAnagramFrequency("anagram", "nagaram")); // true
+console.log(isAnagramFrequency("Dormitory", "dirty room##")); // true
+console.log(isAnagramFrequency("hello", "world")); // false
+
+// Learning Point:
+// 1. Use a single object (`charCount`) to track character occurrences.
+// 2. Check that all counts match between the two strings.
+// 3. Efficient and avoids sorting.
+
+console.log("\n-------------------\n");
+
+// SOLUTION 4 - Using Built-in Functions
+console.log(" Task 10: Solution 4");
+
+function isAnagramBuiltIn(str1, str2) {
+  return (
+    str1.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("") ===
+    str2.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("")
+  );
+}
+
+console.log(isAnagramBuiltIn("anagram", "nagaram")); // true
+console.log(isAnagramBuiltIn("Dormitory", "dirty room##")); // true
+console.log(isAnagramBuiltIn("hello", "world")); // false
+
+// Learning Point:
+// 1. A concise one-liner leveraging built-in methods.
+// 2. Similar to Solution 1 but inline.
+
+console.log("\n-------------------\n");
