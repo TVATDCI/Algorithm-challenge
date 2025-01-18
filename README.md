@@ -56,7 +56,7 @@ To set up the project locally, follow these steps:
 reverseString("hello") === "olleh";
 ```
 
-**Explanation:** <p style="fill:#FFFDE1;">This challenge requires you to write a function that takes a string as input and returns the string in reverse order. For example, if the input is "hello", the output should be "olleh".</p>
+**Explanation:** This challenge requires you to write a function that takes a string as input and returns the string in reverse order. For example, if the input is "hello", the output should be "olleh".
 
 ## Challenge 2: Validate a Palindrome <img src="./images/png-3.png" alt="Algorithm Challenge" width="30" align="right" style="margin-left: 10px;" />
 
