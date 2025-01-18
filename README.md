@@ -32,7 +32,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 10: Anagram ](#challenge-10-anagram-)
 - [Challenge 11: Add All Numbers ](#challenge-11-add-all-numbers-)
 - [Challenge 12: Sum All Primes ](#challenge-12-sum-all-primes-)
-- [Challenge 13: Seek and Destroy](#challenge-13-seek-and-destroy)
+- [Challenge 13: Seek and Destroy ](#challenge-13-seek-and-destroy-)
 - [Challenge 14: Even \& Odd Sums ](#challenge-14-even--odd-sums-)
 
 ## Introduction
@@ -150,9 +150,7 @@ addAll(2, 5, 6, 7) === 20;
 sumAllPrimes(10) === 17;
 ```
 
-## Challenge 13: Seek and Destroy
-
-![Seek and Destroy](./images/seek-and-destroy-diagram.png)
+## Challenge 13: Seek and Destroy <img src="./images/backpack-travel.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Remove from the array whatever is in the following arguments. Return the leftover numbers in an array
