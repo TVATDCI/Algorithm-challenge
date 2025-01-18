@@ -31,7 +31,7 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Challenge 9: Flatten Array ](#challenge-9-flatten-array-)
 - [Challenge 10: Anagram ](#challenge-10-anagram-)
 - [Challenge 11: Add All Numbers ](#challenge-11-add-all-numbers-)
-- [Challenge 12: Sum All Primes](#challenge-12-sum-all-primes)
+- [Challenge 12: Sum All Primes ](#challenge-12-sum-all-primes-)
 - [Challenge 13: Seek and Destroy](#challenge-13-seek-and-destroy)
 - [Challenge 14: Even \& Odd Sums ](#challenge-14-even--odd-sums-)
 
@@ -142,9 +142,7 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 addAll(2, 5, 6, 7) === 20;
 ```
 
-## Challenge 12: Sum All Primes
-
-![Sum All Primes](./images/sum-all-primes-diagram.png)
+## Challenge 12: Sum All Primes <img src="./images/book.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
 // Pass in a number to loop up to and add all of the prime numbers. A prime number is a whole number greater than 1 whose only factors are 1 and itself
