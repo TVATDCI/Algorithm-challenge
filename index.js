@@ -743,3 +743,119 @@ console.log(isAnagramBuiltIn("hello", "world")); // false
 // 2. Similar to Solution 1 but inline.
 
 console.log("\n-------------------\n");
+
+// CHALLENGE 11: ADD ALL NUMBERS
+
+// ## SOLUTION 1: Using `arguments` Object
+// The `arguments` object is available in every function (except arrow functions).
+// It is an array-like object that contains all arguments passed to the function.
+// We iterate through the arguments using a `for` loop and add each value to a sum.
+console.log(" Task 11: Solution 1");
+
+function addAll_Arguments() {
+  let sum = 0; // Initialize the sum
+  for (let i = 0; i < arguments.length; i++) {
+    sum += arguments[i]; // Add each argument to the sum
+  }
+  return sum; // Return the total sum
+}
+
+console.log(addAll_Arguments(2, 5, 6, 7)); // 20
+console.log(addAll_Arguments(1, 2, 3)); // 6
+console.log(addAll_Arguments(10, 20, 30, 40, 50)); // 150
+
+/* ---
+Advantages:
+- Works in older versions of JavaScript (pre-ES6).
+- Useful if you don’t want to explicitly define parameters.
+
+Disadvantages:
+- `arguments` is not an actual array, so methods like `.reduce()` or `.map()` cannot be used directly.
+--- */
+
+// ## SOLUTION 2: Using Rest Operator (`...args`)
+// The rest operator collects all arguments into a true array.
+// This makes it easier to use array methods like `.reduce()` to calculate the sum.
+
+console.log("\n-------------------\n");
+
+console.log(" Task 11: Solution 2");
+// Use the rest operator `...args` to collect all arguments into an array
+function addAll_Rest(...args) {
+  return args.reduce((sum, num) => sum + num, 0); // Use `.reduce()` to calculate the total sum
+}
+
+console.log(addAll_Rest(2, 5, 6, 7)); // 20
+console.log(addAll_Rest(1, 2, 3)); // 6
+console.log(addAll_Rest(10, 20, 30, 40, 50)); // 150
+
+/* ---
+Advantages:
+- Cleaner and more readable.
+- `args` is an actual array, so array methods are directly usable.
+- Recommended for modern JavaScript development (ES6+).
+
+Disadvantages:
+- Not supported in older JavaScript versions (requires ES6+).
+--- */
+
+// ## SOLUTION 3: Using Array Conversion with `arguments`
+// Converts the `arguments` object into a real array using `Array.prototype.slice.call()`.
+// Once converted, we can use `.reduce()` to calculate the sum.
+
+console.log("\n-------------------\n");
+
+console.log(" Task 11: Solution 3");
+
+function addAll_ArrayConversion() {
+  const args = Array.prototype.slice.call(arguments); // Convert `arguments` into a real array
+  return args.reduce((sum, num) => sum + num, 0); // Use `.reduce()` to calculate the total sum
+}
+
+console.log(addAll_ArrayConversion(2, 5, 6, 7)); // 20
+console.log(addAll_ArrayConversion(1, 2, 3)); // 6
+console.log(addAll_ArrayConversion(10, 20, 30, 40, 50)); // 150
+
+/* ---
+Advantages:
+- Works with pre-ES6 JavaScript while still enabling array methods.
+
+Disadvantages:
+- Verbose compared to modern approaches.
+- Relies on the old `arguments` object, which can be confusing.
+--- */
+
+// ## SOLUTION 4: Enhanced Handling with Rest Operator
+// This version includes validation to filter out non-numeric inputs.
+// It uses `.filter()` to exclude invalid data, ensuring only numbers are summed.
+
+console.log("\n-------------------\n");
+
+console.log(" Task 11: Solution 4");
+
+function addAll_Enhanced(...args) {
+  return args
+    .filter((num) => typeof num === "number") // Filter out non-numeric values
+    .reduce((sum, num) => sum + num, 0); // Calculate the sum of the remaining numbers
+}
+
+console.log(addAll_Enhanced(2, 5, "a", 6, 7)); // 20
+console.log(addAll_Enhanced(1, 2, 3, true, null)); // 6
+console.log(addAll_Enhanced()); // 0
+
+/* ---
+Advantages:
+- Robust and handles edge cases gracefully.
+- Ideal for production code where inputs may be unpredictable.
+
+Disadvantages:
+- Slightly slower due to the additional `.filter()` step.
+--- */
+
+// SUMMARY:
+// - `addAll_Arguments`: Best for legacy codebases.
+// - `addAll_Rest`: Clean and modern, suitable for most use cases.
+// - `addAll_ArrayConversion`: Works with older JavaScript, but less concise.
+// - `addAll_Enhanced`: Adds input validation for greater robustness.
+
+console.log("\n-------------------\n");
