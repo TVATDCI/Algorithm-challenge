@@ -162,6 +162,8 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 addAll(2, 5, 6, 7) === 20;
 ```
 
+**Explanation:** This challenge requires you to write a function that takes any number of arguments and returns their sum. For example, if the input is 2, 5, 6, 7, the output should be 20.
+
 ## Challenge 12: Sum All Primes <img src="./images/book.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
