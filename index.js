@@ -859,3 +859,140 @@ Disadvantages:
 // - `addAll_Enhanced`: Adds input validation for greater robustness.
 
 console.log("\n-------------------\n");
+
+// CHALLENGE 12: SUM ALL PRIMES
+console.log(" Challenge 12: Sum All Primes - Solution 1");
+
+// ## SOLUTION 1: Naive Approach
+// Loop through each number up to `num`, checking if it is prime.
+// A helper function `isPrime` checks if a number is prime by testing divisibility.
+
+function sumAllPrimes_Naive(num) {
+  // Helper function to check if a number is prime
+  function isPrime(n) {
+    if (n <= 1) return false; // Prime numbers must be greater than 1
+    for (let i = 2; i < n; i++) {
+      // Check divisibility by numbers less than `n`
+      if (n % i === 0) return false; // If divisible, not prime
+    }
+    return true; // Otherwise, it's prime
+  }
+
+  let sum = 0; // Initialize the sum
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) sum += i; // Add primes to the sum
+  }
+
+  return sum; // Return the total sum
+}
+
+console.log(sumAllPrimes_Naive(10)); // 17
+console.log(sumAllPrimes_Naive(20)); // 77
+
+/* ---
+Advantages:
+- Easy to understand and implement.
+
+Disadvantages:
+- Inefficient for large numbers because the inner loop checks all numbers less than `n`.
+--- */
+
+// ## SOLUTION 2: Optimized Check for Primes
+// Instead of checking divisibility up to `n - 1`, check only up to `Math.sqrt(n)`.
+// A number `n` is not prime if it has a factor less than or equal to its square root.
+
+console.log("\n-------------------\n");
+
+console.log(" Challenge 12: Sum All Primes - Solution 2");
+
+function sumAllPrimes_Optimized(num) {
+  // Helper function to check if a number is prime
+  function isPrime(n) {
+    if (n <= 1) return false; // Prime numbers must be greater than 1
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+      // Check divisibility up to √n
+      if (n % i === 0) return false; // If divisible, not prime
+    }
+    return true; // Otherwise, it's prime
+  }
+
+  let sum = 0; // Initialize the sum
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) sum += i; // Add primes to the sum
+  }
+
+  return sum; // Return the total sum
+}
+
+console.log(sumAllPrimes_Optimized(10)); // 17
+console.log(sumAllPrimes_Optimized(20)); // 77
+console.log(sumAllPrimes_Optimized(50)); // 328
+
+/* ---
+Advantages:
+- Much faster for larger numbers due to the reduced number of checks.
+- Focuses on factors up to √n, which is mathematically sufficient.
+
+Disadvantages:
+- Still involves nested loops (one for summing and one for checking primality).
+--- */
+
+// ## SOLUTION 3: Sieve of Eratosthenes
+// The Sieve of Eratosthenes is an efficient algorithm to find all primes up to a given limit.
+// Mark multiples of each prime starting from 2, and sum all remaining unmarked numbers.
+
+console.log("\n-------------------\n");
+
+console.log(" Challenge 12: Sum All Primes - Solution 3");
+
+function sumAllPrimes_Sieve(num) {
+  if (num < 2) return 0; // No primes below 2
+
+  const primes = Array(num + 1).fill(true); // Create an array of truthy values
+  primes[0] = primes[1] = false; // 0 and 1 are not prime
+
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (primes[i]) {
+      for (let j = i * i; j <= num; j += i) {
+        primes[j] = false; // Mark multiples of `i` as not prime
+      }
+    }
+  }
+
+  // Sum up all indices marked as prime
+  return primes.reduce(
+    (sum, isPrime, index) => (isPrime ? sum + index : sum),
+    0
+  );
+}
+
+console.log(sumAllPrimes_Sieve(10)); // 17
+console.log(sumAllPrimes_Sieve(20)); // 77
+console.log(sumAllPrimes_Sieve(50)); // 328
+
+/* ---
+Advantages:
+- Most efficient for finding primes in a range.
+- Avoids repeatedly checking primarily of the same numbers.
+
+Disadvantages:
+- Requires additional memory to store the `primes` array.
+- Overhead for small inputs where the naive or optimized approach may suffice.
+--- */
+
+// ## SUMMARY
+/*
+1. `sumAllPrimes_Naive`:
+   - Best for small inputs.
+   - Simple and easy to implement, but inefficient for large numbers.
+
+2. `sumAllPrimes_Optimized`:
+   - Improves on the naive approach by reducing checks to √n.
+   - Suitable for moderately large numbers.
+
+3. `sumAllPrimes_Sieve`:
+   - Most efficient for finding primes up to a large number.
+   - Recommended for large ranges or frequent calculations involving primes.
+*/
+
+console.log("\n-------------------\n");
