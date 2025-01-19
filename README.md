@@ -172,6 +172,8 @@ addAll(2, 5, 6, 7) === 20;
 sumAllPrimes(10) === 17;
 ```
 
+**Explanation:** A prime number is a whole number greater than 1 whose only factors are 1 and itself. This challenge requires you to write a function that takes a number as input and returns the sum of all prime numbers up to that number. For example, if the input is 10, the output should be 17 (2 + 3 + 5 + 7).
+
 ## Challenge 13: Seek and Destroy <img src="./images/backpack-travel.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
