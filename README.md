@@ -77,6 +77,8 @@ isPalindrome("hello") === false;
 reverseInt(521) === 125;
 ```
 
+**Explanation:** This challenge requires you to write a function that takes an integer as input and returns the integer with its digits reversed. For example, if the input is 521, the output should be 125.
+
 ## Challenge 4: Capitalize Letters <img src="./images/capitalized.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
