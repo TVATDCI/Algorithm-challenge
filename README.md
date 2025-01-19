@@ -97,6 +97,8 @@ capitalizeLetters("i love javascript") === "I Love Javascript";
 maxCharacter("javascript") === "a";
 ```
 
+**Explanation:** This challenge requires you to write a function that takes a string as input and returns the character that appears most frequently in the string. For example, if the input is "javascript", the output should be "a".
+
 ## Challenge 6: FizzBuzz <img src="./images/gradient.png" alt="Algorithm Challenge" width="30" align="right" style="margin-left: 10px;" />
 
 ```javascript
