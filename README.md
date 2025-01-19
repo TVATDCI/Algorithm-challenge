@@ -131,6 +131,8 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 3) === [[1, 2, 3], [4, 5, 6], [7]];
 chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 ```
 
+**Explanation:** This challenge requires you to write a function that takes an array and a chunk size as input and splits the array into smaller arrays (chunks) of the specified size. For example, if the input array is [1, 2, 3, 4, 5, 6, 7] and the chunk size is 3, the output should be [[1, 2, 3], [4, 5, 6], [7]].
+
 ## Challenge 9: Flatten Array <img src="./images/curve.png" alt="Algorithm Challenge" width="100" align="right" style="margin-left: 10px;" />
 
 ```javascript
