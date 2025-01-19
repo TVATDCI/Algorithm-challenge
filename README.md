@@ -120,6 +120,8 @@ longestWord("My name is Brad") === ["name", "brad"];
 longestWord("Brad") === "brad";
 ```
 
+**Explanation:** This challenge requires you to write a function that takes a string as input and returns the longest word in the string. If there are multiple words with the same length, you can return an array of those words.
+
 ## Challenge 8: Array Chunking <img src="./images/brackets-green.svg" alt="Algorithm Challenge" width="30" align="right" style="margin-left: 10px;" />
 
 ```javascript
