@@ -152,6 +152,8 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 "Dormitory" === "dirty room##";
 ```
 
+**Explanation:** An anagram is a word or phrase formed by rearranging the letters of another word or phrase. This challenge requires you to write a function that takes two strings as input and returns true if they are anagrams of each other, and false otherwise.
+
 ## Challenge 11: Add All Numbers <img src="./images/abacus.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
