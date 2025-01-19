@@ -141,6 +141,8 @@ chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2], [3, 4], [5, 6], [7]];
 [[1, 2], [3, 4], [5, 6], [7]] === [1, 2, 3, 4, 5, 6, 7];
 ```
 
+**Explanation:** This challenge requires you to write a function that takes an array of arrays as input and flattens it into a single array. For example, if the input is [[1, 2], [3, 4], [5, 6], [7]], the output should be [1, 2, 3, 4, 5, 6, 7].
+
 ## Challenge 10: Anagram <img src="./images/barrier.svg" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
