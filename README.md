@@ -87,6 +87,8 @@ reverseInt(521) === 125;
 capitalizeLetters("i love javascript") === "I Love Javascript";
 ```
 
+**Explanation:** This challenge requires you to write a function that takes a string as input and returns the string with the first letter of each word capitalized. For example, if the input is "i love javascript", the output should be "I Love Javascript".
+
 ## Challenge 5: Max Character <img src="./images/png-1.png" alt="Algorithm Challenge" width="30" align="right" style="margin-left: 10px;" />
 
 ```javascript
