@@ -182,6 +182,8 @@ sumAllPrimes(10) === 17;
 seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6) === [3, 4, "hello"];
 ```
 
+**Explanation:** This challenge requires you to write a function that takes an array and additional arguments, and removes all elements from the array that match any of the additional arguments. For example, if the input is [2, 3, 4, 6, 6, "hello"], 2, 6, the output should be [3, 4, "hello"].
+
 ## Challenge 14: Even & Odd Sums <img src="./images/png-2.png" alt="Algorithm Challenge" width="25" align="right" style="margin-left: 10px;" />
 
 ```javascript
