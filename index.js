@@ -996,3 +996,62 @@ Disadvantages:
 */
 
 console.log("\n-------------------\n");
+
+console.log(" Challenge 13: Seek and Destroy - Solution 3");
+
+// ## SOLUTION 3: Using rest parameters and Set for optimized lookups
+// A Set provides faster lookups compared to an array, improving performance.
+
+function seekAndDestroy_optimized(array, ...valuesToRemove) {
+  const valuesSet = new Set(valuesToRemove); // Convert values to Set for faster lookup
+  return array.filter((item) => !valuesSet.has(item)); // Check if the value is not in the set
+}
+
+console.log(seekAndDestroy_optimized([2, 3, 4, 6, 6, "hello"], 2, 6)); // [3, 4, "hello"]
+console.log(seekAndDestroy_optimized(["red", "blue", "green"], "blue")); // ["red", "green"]
+
+/* ---
+Advantages:
+- Faster lookups compared to using `includes()` because Set has O(1) complexity.
+- Efficient for large datasets.
+
+Disadvantages:
+- Uses additional memory for the Set.
+--- */
+
+console.log("\n-------------------\n");
+
+console.log(" Challenge 13: Seek and Destroy - Solution 4");
+
+// ## SOLUTION 4: Using reduce() method
+// Reduce allows accumulation while filtering out unwanted elements.
+
+function seekAndDestroy_reduce(array, ...valuesToRemove) {
+  return array.reduce((acc, item) => {
+    if (!valuesToRemove.includes(item)) {
+      acc.push(item); // Add items not in the valuesToRemove
+    }
+    return acc;
+  }, []);
+}
+
+console.log(seekAndDestroy_reduce([2, 3, 4, 6, 6, "hello"], 2, 6)); // [3, 4, "hello"]
+console.log(seekAndDestroy_reduce([1, 2, 3, 4], 3)); // [1, 2, 4]
+
+/* ---
+Advantages:
+- Functional and avoids unnecessary intermediate arrays.
+
+Disadvantages:
+- More complex to read compared to filter-based solutions.
+
+Summary of Solutions
+- Solution	Approach	Time Complexity	Space Complexity	Pros	Cons
+- Solution 1	filter() + includes()	O(n * m)	O(n)	Clean, modern, easy to read	Slow for large inputs
+- Solution 2 (Legacy)	Loop with arguments	O(n * m)	O(n)	Compatible with older JS	Verbose, less efficient
+- Solution 3 (Optimized)	Set for lookup	O(n)	O(n)	Faster for large data	Extra memory for Set
+- Solution 4 (Reduce)	Functional reduce	O(n * m)	O(n)	Functional, avoids temp arrays	Slightly complex to read
+
+--- */
+
+console.log("\n-------------------\n");
