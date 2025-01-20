@@ -1055,3 +1055,118 @@ Summary of Solutions
 --- */
 
 console.log("\n-------------------\n");
+
+console.log(" Challenge 14: Even and Odd Sums");
+
+// CHALLENGE 14: EVEN AND ODD SUMS - SOLUTION 1
+// ## SOLUTION 1: Using a for loop (classic approach)
+function evenOddSums(arr) {
+  let evenSum = 0;
+  let oddSum = 0;
+
+  for (let num of arr) {
+    if (num % 2 === 0) {
+      evenSum += num; // Add to even sum if divisible by 2
+    } else {
+      oddSum += num; // Otherwise, add to odd sum
+    }
+  }
+
+  return [evenSum, oddSum];
+}
+
+console.log(evenOddSums([50, 60, 60, 45, 71])); // [170, 116]
+
+/* ---
+Advantages:
+- Simple and easy to understand.
+- Efficient with O(n) time complexity.
+
+Disadvantages:
+- Slightly more verbose compared to functional approaches.
+--- */
+
+console.log("\n-------------------\n");
+
+// ## SOLUTION 2: Using the reduce() method (Functional Approach)
+// This solution uses the reduce function to accumulate sums into an array.
+function evenOddSums_reduce(arr) {
+  return arr.reduce(
+    (acc, num) => {
+      num % 2 === 0 ? (acc[0] += num) : (acc[1] += num);
+      return acc;
+    },
+    [0, 0] // Initial values for evenSum and oddSum
+  );
+}
+
+console.log(evenOddSums_reduce([50, 60, 60, 45, 71])); // [170, 116]
+
+/* ---
+Advantages:
+- Concise and leverages functional programming.
+- Keeps logic within a single call.
+
+Disadvantages:
+- Can be harder to read for beginners.
+--- */
+
+console.log("\n-------------------\n");
+
+// ## SOLUTION 3: Using filter() and reduce() (Separation of Concerns)
+// We first filter the even and odd numbers, then sum them separately.
+function evenOddSums_filter(arr) {
+  const evenSum = arr
+    .filter((num) => num % 2 === 0)
+    .reduce((sum, num) => sum + num, 0);
+  const oddSum = arr
+    .filter((num) => num % 2 !== 0)
+    .reduce((sum, num) => sum + num, 0);
+
+  return [evenSum, oddSum];
+}
+
+console.log(evenOddSums_filter([50, 60, 60, 45, 71])); // [170, 116]
+
+/* ---
+Advantages:
+- Readable and modular approach.
+- Good separation of concerns (filtering vs summing).
+
+Disadvantages:
+- Less efficient since it iterates through the array twice.
+--- */
+
+console.log("\n-------------------\n");
+
+// ## SOLUTION 4: Using a forEach() method
+// This solution iterates through the array and updates sums in a forEach loop.
+function evenOddSums_forEach(arr) {
+  let evenSum = 0;
+  let oddSum = 0;
+
+  arr.forEach((num) => {
+    num % 2 === 0 ? (evenSum += num) : (oddSum += num);
+  });
+
+  return [evenSum, oddSum];
+}
+
+console.log(evenOddSums_forEach([50, 60, 60, 45, 71])); // [170, 116]
+
+/* ---
+Advantages:
+- Clean and concise using a modern approach.
+- Avoids the need for a loop variable.
+
+Disadvantages:
+- Slightly slower compared to a basic for loop.
+Summary of Solutions
+- Solution	Approach	Time Complexity	Space Complexity	Pros	Cons
+- Solution 1	For loop	O(n)	O(1)	Simple and efficient	Verbose
+- Solution 2 (Functional)	Reduce method	O(n)	O(1)	Concise, declarative style	Harder for beginners
+- Solution 3 (Filtering)	Filter + Reduce	O(n)	O(n)	Readable, modular	Iterates multiple times
+- Solution 4 (forEach)	forEach loop	O(n)	O(1)	Clean and modern	Slightly less efficient
+
+--- */
+console.log("\n-------------------\n");
