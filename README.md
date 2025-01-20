@@ -192,5 +192,7 @@ seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6) === [3, 4, "hello"];
 evenOddSums([50, 60, 60, 45, 71]) === [170, 116];
 ```
 
+**Explanation:** This challenge requires you to write a function that takes an array as input and returns an array with two elements: the sum of all even numbers and the sum of all odd numbers. For example, if the input is [50, 60, 60, 45, 71], the output should be [170, 116].
+
 $$
 $$
