@@ -6,9 +6,6 @@ $$
 {\color{red}Made \space \color{red} With \space \color{red}❤️ }
 $$
 
-<img src="./images/ted.png" alt="Algorithm Challenge" width="35" align="left" style="margin-left: 10px;" />
-<img src="./images/4-small.png" alt="Algorithm Challenge" width="50" align="right" style="margin-left: 10px;" />
-
 A very good place to practice algorithms is [LeetCode](https://leetcode.com) - this exercise contains practice challenges similar to the problems found on LeetCode.
 ![](images/gradientWave.svg)
 
@@ -20,20 +17,20 @@ A very good place to practice algorithms is [LeetCode](https://leetcode.com) - t
 - [Table of Contents 🏽 🏼 🏻 🏿 🏾](#table-of-contents-----)
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Challenge 1: Reverse a String ](#challenge-1-reverse-a-string-)
-- [Challenge 2: Validate a Palindrome ](#challenge-2-validate-a-palindrome-)
-- [Challenge 3: Reverse an Integer ](#challenge-3-reverse-an-integer-)
-- [Challenge 4: Capitalize Letters ](#challenge-4-capitalize-letters-)
-- [Challenge 5: Max Character ](#challenge-5-max-character-)
-- [Challenge 6: FizzBuzz ](#challenge-6-fizzbuzz-)
-- [Challenge 7: Longest Word ](#challenge-7-longest-word-)
-- [Challenge 8: Array Chunking ](#challenge-8-array-chunking-)
-- [Challenge 9: Flatten Array ](#challenge-9-flatten-array-)
-- [Challenge 10: Anagram ](#challenge-10-anagram-)
-- [Challenge 11: Add All Numbers ](#challenge-11-add-all-numbers-)
-- [Challenge 12: Sum All Primes ](#challenge-12-sum-all-primes-)
-- [Challenge 13: Seek and Destroy ](#challenge-13-seek-and-destroy-)
-- [Challenge 14: Even \& Odd Sums ](#challenge-14-even--odd-sums-)
+- [Challenge 1: Reverse a String](#challenge-1-reverse-a-string-)
+- [Challenge 2: Validate a Palindrome](#challenge-2-validate-a-palindrome-)
+- [Challenge 3: Reverse an Integer](#challenge-3-reverse-an-integer-)
+- [Challenge 4: Capitalize Letters](#challenge-4-capitalize-letters-)
+- [Challenge 5: Max Character](#challenge-5-max-character-)
+- [Challenge 6: FizzBuzz](#challenge-6-fizzbuzz-)
+- [Challenge 7: Longest Word](#challenge-7-longest-word-)
+- [Challenge 8: Array Chunking](#challenge-8-array-chunking-)
+- [Challenge 9: Flatten Array](#challenge-9-flatten-array-)
+- [Challenge 10: Anagram](#challenge-10-anagram-)
+- [Challenge 11: Add All Numbers](#challenge-11-add-all-numbers-)
+- [Challenge 12: Sum All Primes](#challenge-12-sum-all-primes-)
+- [Challenge 13: Seek and Destroy](#challenge-13-seek-and-destroy-)
+- [Challenge 14: Even \& Odd Sums](#challenge-14-even--odd-sums-)
 
 ## Introduction
 
@@ -44,6 +41,7 @@ This repository contains a collection of algorithm challenges designed to help y
 To set up the project locally, follow these steps:
 
 1. Clone the repository:
+
    ```sh
    git clone https://github.com/your-username/algorithm-challenges.git
    ```
