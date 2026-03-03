@@ -1,10 +1,11 @@
-// ### CHALLENGE 1: REVERSE A STRING
-// // Return a string in reverse
-// //  ex:
-// reverseString('hello') === 'olleh';
+// ============================================================
+// ! CHALLENGE 1: REVERSE A STRING
+// Goal: Return the given string in reverse order.
+// Example: reverseString('hello') === 'olleh'
+// ============================================================
 console.log("Task 1: Reverse a String");
 
-// SOLUTION 1
+// SOLUTION 1 – Step-by-step (most readable for beginners)
 console.log(" Task 1: Solution 1");
 function reverseStringX(str) {
   // Split the string into an array
@@ -17,7 +18,7 @@ function reverseStringX(str) {
 
 console.log(reverseStringX("hello"));
 
-// SOLUTION 2 Just put it together in one line!
+// SOLUTION 2 – Chained one-liner (same logic, more compact)
 console.log(" Task 1: Solution 2");
 function reverseString(str) {
   return str.split("").reverse().join("");
@@ -25,36 +26,32 @@ function reverseString(str) {
 
 console.log(reverseString("hello") === "olleh");
 
-// SOLUTION 3 Ninja way
+// SOLUTION 3 – Arrow function shorthand (ES6 style)
 console.log(" Task 1: Solution 3");
-// Attach arrow functions to a variable, split the string into an array(''), reverse the array .reverse(), and join the array back into a string .join('')
-// print the string('hello') and compare it to 'olleh' to return the boolean value!
+// Use an arrow function: split the string into an array, reverse it, then join it back.
+// Comparing to 'olleh' returns a boolean — remove the comparison to get the reversed string.
 const reverseStringNinja = (str) => str.split("").reverse().join("");
 
 console.log(reverseStringNinja("hello") === "olleh");
 
-// SOLUTION 4 : Direct from the console.log
+// SOLUTION 4 – Inline, no function needed
 console.log(" Task 1: Solution 4");
-// Together with the console.log, split the string into an array, reverse the array, and join the array back into a string
-// To get the boolean value, all you have to do is to fill the value inside ('') and compare it to 'olleh'
-// Or just take out the === 'olleh' and it will return the reversed string. ALGORITHM!
+// You can run this directly — no function needed.
+// Removing '=== "olleh"' will log the reversed string instead of the boolean.
 console.log("hello".split("").reverse().join("") === "olleh");
 console.log("hello".split("").reverse().join(""));
 
 console.log("\n-------------------\n");
 
 console.log("Task 2: Palindrome");
-// #### CHALLENGE 2: VALIDATE A PALINDROME
-// // Return true if palindrome and false if not
-// // ex:
-// isPalindrome('racecar') === true;
-// isPalindrome('hello') == false;
-// * Palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward.
-// * Allow only alphanumeric characters, ignore case, and ignore spaces.
-// * Ideally, i would like to compare the original string to the reversed string?
-// * Use the reverse() method to reverse the string.
-// * Compare the reversed string to the original string.
-// * Return true if they are the same and false if they are different.
+// ============================================================
+// ! CHALLENGE 2: VALIDATE A PALINDROME
+// A palindrome reads the same forwards and backwards (e.g. "racecar").
+// Goal: Return true if the string is a palindrome, false if not.
+// Rules: Ignore spaces, punctuation, and letter case.
+// Example: isPalindrome('racecar') === true
+//          isPalindrome('hello')   === false
+// ============================================================
 // SOLUTION 1
 console.log(" Task 2: Solution 1");
 function isPalindrome(str) {
@@ -69,19 +66,18 @@ console.log(isPalindrome("hello") === false); //true
 console.log(isPalindrome("hello") !== false); //false
 console.log(isPalindrome("racecar")); // true
 console.log(isPalindrome("hello")); // false
-// Learning point: The regex /[^a-z0-9]/gi is used to filter out all non-alphanumeric characters. The g flag is used to search for all occurrences in the string, and the i flag is used to ignore the case.
-// * NOTE: The console.log printout with the boolean value is a good way to test the function. It is a good practice to test the function with different inputs to ensure it works as expected.
-/** In this case, console.log(isPalindrome('racecar') === true); will print true, and
- * console.log(isPalindrome('hello') === false); will also print true.
- *
- * console.log(isPalindrome('racecar')); will print true, as "racecar" is a palindrome, BUT
- * console.log(isPalindrome('hello')); will print false, as "hello" is not a palindrome.
- */
+// Note: The regex /[^a-z0-9]/gi removes all non-alphanumeric characters.
+//       The 'g' flag matches ALL occurrences; the 'i' flag ignores letter case.
+//
+// Tip: Comparing the function result to a boolean (=== true / === false)
+//      is a great way to verify your function works as expected.
+//      isPalindrome('racecar') returns true  → true  === true  → logs: true
+//      isPalindrome('hello')   returns false → false === false → logs: true
 console.log("\n-------------------\n");
 
-// SOLUTION 2
+// SOLUTION 2 – Same logic as Solution 1, rewritten as an arrow function
 console.log(" Task 2: Solution 2");
-// * Use an arrow function to define the function.
+// Arrow functions use the same logic but have a more compact syntax.
 const isPalindromeX = (str) => {
   return (
     str.replace(/[^a-z0-9]/gi, "").toLowerCase() ===
@@ -93,7 +89,8 @@ const isPalindromeX = (str) => {
       .join("")
   );
 };
-// * Logic of the code is the same as the previous solution, but this time, we use an arrow function to define the function. return using === to compare the original string to the reversed string.
+// * Logic of the code is the same as the previous solution, using an arrow function.
+// * The '===' operator compares the cleaned original string to the cleaned reversed string.
 
 console.log(isPalindromeX("racecar") === true); // true
 console.log(isPalindromeX("hello") === false); //true
@@ -102,9 +99,10 @@ console.log(isPalindromeX("racecar")); // true
 console.log(isPalindromeX("hello")); // false
 
 console.log("\n-------------------\n");
-// SOLUTION 3
-console.log(" Task 2: Solution 3");
-// Ninja for personal fun!
+// SOLUTION 3 – Ultra-compact arrow function (implicit return, no curly braces)
+// Same logic as Solution 2, but written as a single expression.
+// When an arrow function body is one expression, you can drop the 'return'
+// keyword and the curly braces {} — the result is returned automatically.
 const isPalindromeNinja = (str) =>
   str.replace(/[^a-z0-9]/gi, "").toLowerCase() ===
   str
@@ -113,7 +111,8 @@ const isPalindromeNinja = (str) =>
     .split("")
     .reverse()
     .join("");
-// * Note: There is not much difference between the previous solutions(with arrow function) and this one. The only difference is that i did not use the return keyword!!!
+console.log(" Task 2: Solution 3");
+// * Note: This is the same logic as Solutions 1 and 2 with implicit return.
 console.log(isPalindromeX("racecar") === true); // true
 console.log(isPalindromeX("hello") === false); //true
 console.log(isPalindromeX("hello") !== false); //false
@@ -123,10 +122,15 @@ console.log(isPalindromeX("hello")); // false
 console.log("\n-------------------\n");
 
 console.log("Task 3: Reverse an Integer");
-// ### CHALLENGE 3: REVERSE AN INTEGER
+// ============================================================
+// ! CHALLENGE 3: REVERSE AN INTEGER
+// Goal: Return the digits of an integer in reverse order.
+// Handles negative numbers by preserving the original sign.
+// Example: reverseInt(521)  === 125
+//          reverseInt(-521) === -125
+// ============================================================
 
-console.log(" Task 3: Solution 1");
-// SOLUTION 1
+// SOLUTION 1 – Step-by-step with sign handling
 console.log(" Task 3: Solution 1");
 function reverseIntX(int) {
   // Let's handle the negative numbers
@@ -139,17 +143,19 @@ function reverseIntX(int) {
 
 console.log(reverseIntX(521) === 125); // true
 
-// SOLUTION 2
+// SOLUTION 2 – Chained one-liner (same logic, more compact)
 console.log(" Task 3: Solution 2");
-// Use the parseInt() function to convert the integer to a string, split the string into an array, reverse the array, and join the array back into a string.
+// Convert to string, reverse, then convert back to integer, and reapply sign.
 function reverseInt(int) {
   return parseInt(int.toString().split("").reverse().join("")) * Math.sign(int);
 }
 
 console.log(reverseInt(521) === 125); // true
 
-// SOLUTION 3
+// SOLUTION 3 – Using Math.abs() to handle the sign separately
 console.log(" Task 3: Solution 3");
+// Math.abs() strips the sign before reversing, then we reapply it with Math.sign().
+// Math.abs(-521) → 521, reversed → 125, then × -1 → -125.
 
 function reverseIntAbs(num) {
   const numSign = Math.sign(num);
@@ -158,62 +164,79 @@ function reverseIntAbs(num) {
 }
 
 console.log(reverseIntAbs(521) === 125); // true
-// Solution 3 is more or less the same as solution 2, but this time, we use the Math.abs() function to return the absolute value of a number. I will need to find more use cases for the Math.abs() function. To be continued...
-// * The Math.abs() function returns the absolute value of a number, which is the number without its sign.
-
-// // Return an integer in reverse
-// // ex:
-// reverseInt(521) === 125;
+// Note: All three solutions produce the same result.
+// The key difference is that Solution 3 explicitly converts to a positive number
+// with Math.abs() before reversing, making the sign handling very transparent.
 console.log("\n-------------------\n");
 
 console.log("Challenge 4: Capitalize Letters");
-// ### CHALLENGE 4: CAPITALIZE LETTERS
-// // Return a string with the first letter of every word capitalized
-// //  ex:
+// ============================================================
+// ! CHALLENGE 4: CAPITALIZE LETTERS
+// Goal: Return a string with the first letter of every word capitalized.
+// Example: capitalizeLetters('i love javascript') === 'I Love Javascript'
+// ============================================================
 console.log(" Task 4: Solution 1");
 function capitalizeLetters(str) {
   const strArr = str.toLowerCase().split(" ");
-  return strArr.map((word) => word[0].toUpperCase() + word.substr(1)).join(" ");
+  // word[0].toUpperCase() capitalizes the first letter.
+  // word.slice(1) returns the rest of the word (substr() is deprecated — use slice()).
+  return strArr.map((word) => word[0].toUpperCase() + word.slice(1)).join(" ");
 }
 
 console.log(capitalizeLetters("i love javascript") === "I Love Javascript"); // true
 
-// SOLUTION 2
+// SOLUTION 2 – Same logic chained into one return statement
 console.log(" Task 4: Solution 2");
 function capitalizeLettersX(str) {
   return str
     .toLowerCase()
     .split(" ")
-    .map((word) => word[0].toUpperCase() + word.substr(1))
+    .map((word) => word[0].toUpperCase() + word.slice(1))
     .join(" ");
 }
 
 console.log(capitalizeLettersX("i love javascript") === "I Love Javascript"); // true
 
-// SOLUTION 3
+// SOLUTION 3 – Arrow function (same logic, more concise syntax)
 console.log(" Task 4: Solution 3");
 const capitalizeLettersNinja = (str) => {
   return str
     .toLowerCase()
     .split(" ")
-    .map((word) => word[0].toUpperCase() + word.substr(1))
+    .map((word) => word[0].toUpperCase() + word.slice(1))
     .join(" ");
 };
 
 console.log(
-  capitalizeLettersNinja("i love javascript") === "I Love Javascript"
+  capitalizeLettersNinja("i love javascript") === "I Love Javascript",
 ); // true
-// * The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
-// * The substr() method returns the characters in a string beginning at the specified location through the specified number of characters.
-// * The toUpperCase() method returns the calling string value converted to uppercase (the value will be converted to a string if it isn't one).
+// Key methods used across all 3 solutions:
+// - toLowerCase() + split(' '): normalize and break the string into words.
+// - map(): create a new array by transforming each element.
+// - word[0].toUpperCase(): capitalize the first letter of a word.
+// - word.slice(1): return the rest of the word from index 1 onwards.
+//   (Note: substr() is deprecated in modern JavaScript — always prefer slice())
+// - join(' '): reassemble the words into a single string.
 console.log(
-  "\nThe 3 solutions use more or less the same methods, just written differently!  \n"
+  "\nThe 3 solutions use more or less the same methods, just written differently!  \n",
 );
 console.log("\n-------------------\n");
 // capitalizeLetters('i love javascript') === 'I Love Javascript';
 
 console.log("Task 5: Max Character");
-// ### CHALLENGE 5: MAX CHARACTER
+// ============================================================
+// ! CHALLENGE 5: MAX CHARACTER
+// Goal: Return the character that appears most often in a string.
+// Example: maxCharacter('javascript') === 'a'
+// Fun fact: 'a' appears twice in 'javascript' — more than any other letter.
+//
+// How it works:
+// 1. Use a 'for...of' loop to count each character and store it in an object.
+//    (for...of gives you the VALUES of an iterable like a string or array)
+// 2. Use a 'for...in' loop to find the key with the highest count.
+//    (for...in gives you the KEYS of an object)
+// 3. Return the character with the highest count.
+// ============================================================
 console.log(" Task 5: Solution 1");
 
 function maxCharacter(str) {
@@ -234,20 +257,8 @@ function maxCharacter(str) {
 }
 
 console.log(maxCharacter("javascript") === "a"); // true
-/** The logic of the code is as follows:
- * * Create an object to store the character count.
- * * Loop through the string and increment the character count.
- * * Get the character with the highest count.
- * * Return the character with the highest count.
- * How to method:
- * Store the character count in an object. Use a for...of loop to iterate over the string and increment the character count.
- * Use a for...in loop to get the character with the highest count.
- * Return the character with the highest count.(maxChar)
- * * FUN FACT! why is (maxCharacter("javascript") === "a") true?
- * * Because the character "a" is the most common character in the string "javascript".
- * a = 2 That is why the function returns "a" or true, it is the most common character in the string!!
- */
-// SOLUTION 2
+
+// SOLUTION 2 – Arrow function (same logic, more compact syntax)
 console.log(" Task 5: Solution 2");
 const maxCharacterX = (str) => {
   const charCount = {};
@@ -269,18 +280,19 @@ const maxCharacterX = (str) => {
 };
 
 console.log(maxCharacterX("javascript") === "a"); // true
-
-// * Not much difference between the two solutions, just an arrow function, written differently!
-
-// // Return the character that is most common in a string
-// // ex:
-// maxCharacter('javascript') == 'a';
+// Same logic as Solution 1 — just rewritten as an arrow function.
 
 console.log("\n-------------------\n");
 console.log("Task 6: FizzBuzz");
-// ### CHALLENGE 6: FIZZBUZZ
-// Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
-// SOLUTION 1 - Classic
+// ============================================================
+// ! CHALLENGE 6: FIZZBUZZ
+// Goal: Print numbers 1–100. Replace:
+//       - multiples of 3        → "Fizz"
+//       - multiples of 5        → "Buzz"
+//       - multiples of both 3×5 → "FizzBuzz"
+// Tip: Always check for 15 (= 3×5) FIRST — otherwise it gets caught by 3 or 5 alone.
+// ============================================================
+// SOLUTION 1 – Classic if/else (most readable)
 console.log(" Task 6: Solution 1");
 function fizzBuzz() {
   for (let i = 1; i <= 100; i++) {
@@ -298,8 +310,10 @@ function fizzBuzz() {
 
 fizzBuzz(); // * Don't forget to call the function!!!#
 
-// SOLUTION 2 - Arrow Function + Ternary Operator
-/*console.log(" Task 6: Solution 2");
+// SOLUTION 2 – Arrow function with ternary operator (shorter, same logic)
+// The ternary operator is a one-line if/else:  condition ? valueIfTrue : valueIfFalse
+// They can be chained — always check the most specific case (15) first.
+console.log(" Task 6: Solution 2");
 
 const fizzBuzzX = () => {
   for (let i = 1; i <= 100; i++) {
@@ -307,26 +321,32 @@ const fizzBuzzX = () => {
       i % 15 === 0
         ? "FizzBuzz"
         : i % 3 === 0
-        ? "Fizz"
-        : i % 5 === 0
-        ? "Buzz"
-        : i
+          ? "Fizz"
+          : i % 5 === 0
+            ? "Buzz"
+            : i,
     );
   }
 };
 
 fizzBuzzX();
-*/
 
-// * The ternary operator is a shorthand way of writing an if...else statement. It consists of a condition followed by a question mark (?), then an expression to execute if the condition is true, followed by a colon (:), and an expression to execute
-// * if the condition is false. The ternary operator is used to simplify the code and make it more concise.
+// * The ternary operator is a concise way to write if/else.
+// * Deeply chained ternaries can be hard to read, so use them wisely.
 
-console.log("\n-------------------)n");
+console.log("\n-------------------\n");
 
 console.log("Task 7: Longest Word");
-// #### CHALLENGE 7: LONGEST WORD
-// * Return the longest word(s) in a given string.
-// SOLUTION 1 - Return a single longest word
+// ============================================================
+// ! CHALLENGE 7: LONGEST WORD
+// Goal: Return the longest word(s) in a given sentence.
+// Punctuation is ignored (e.g. "there," is treated as "there").
+// Three approaches:
+//   Solution 1 – return a single longest word
+//   Solution 2 – return an array (includes ties)
+//   Solution 3 – smart: single word or array depending on ties
+// ============================================================
+// SOLUTION 1 – Return a single longest word
 console.log(" Task 7: Solution 1");
 
 function longestWord(str) {
@@ -351,7 +371,7 @@ console.log(longestWord("Brad")); // "Brad"
 
 console.log("\n-------------------\n");
 
-// SOLUTION 2 - Return an array if multiple words have the same length
+// SOLUTION 2 – Return an array if multiple words share the same length
 console.log(" Task 7: Solution 2");
 
 function longestWordArray(str) {
@@ -376,7 +396,7 @@ console.log(longestWordArray("Brad")); // ["Brad"]
 
 console.log("\n-------------------\n");
 
-// SOLUTION 3 - Only return an array if there are multiple words, otherwise return a single word
+// SOLUTION 3 – Return an array only if there are ties, otherwise a single word
 console.log(" Task 7: Solution 3");
 
 function longestWordSmart(str) {
@@ -401,11 +421,15 @@ console.log(longestWordSmart("Brad")); // "Brad"
 // 1. This combines the logic from both previous solutions for flexibility.
 // 2. A conditional (`longestWords.length > 1`) determines whether to return an array or a single word.
 // 3. Efficiently handles cases where only one word is the longest.
-// #### CHALLENGE 8: ARRAY CHUNKING
-// * Split an array into chunked arrays of a specific length.
+// ============================================================
+// ! CHALLENGE 8: ARRAY CHUNKING
+// Goal: Split an array into smaller arrays ("chunks") of a given size.
+// The last chunk may be smaller if the array doesn't divide evenly.
+// Example: chunkArray([1,2,3,4,5,6,7], 3) → [[1,2,3],[4,5,6],[7]]
+// ============================================================
 
+// SOLUTION 1 – Using a for loop (simple and efficient)
 console.log(" Task 8: Solution 1");
-// SOLUTION 1 - Using a for loop
 
 function chunkArray(arr, size) {
   // Initialize an empty array to hold the chunks.
@@ -431,7 +455,9 @@ console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 2)); // [[1, 2], [3, 4], [5, 6], [
 
 console.log("\n-------------------\n");
 
-// SOLUTION 2 - Using a while loop and splice
+// SOLUTION 2 – Using a while loop and splice()
+// ⚠️  WARNING: splice() modifies the original array!
+// If you need to keep the original array unchanged, use slice() (Solution 1 or 3).
 console.log(" Task 8: Solution 2");
 
 function chunkArrayWhile(arr, size) {
@@ -458,13 +484,13 @@ console.log(chunkArrayWhile([1, 2, 3, 4, 5, 6, 7], 2)); // [[1, 2], [3, 4], [5, 
 
 console.log("\n-------------------\n");
 
-// SOLUTION 3 - Using Array.from()
+// SOLUTION 3 – Using Array.from() (concise, avoids modifying original)
 console.log(" Task 8: Solution 3");
 
 function chunkArrayFrom(arr, size) {
   // Use `Array.from()` to create a new array, with the length determined by `Math.ceil(arr.length / size)`.
   return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
-    arr.slice(i * size, i * size + size)
+    arr.slice(i * size, i * size + size),
   );
 }
 
@@ -478,7 +504,7 @@ console.log(chunkArrayFrom([1, 2, 3, 4, 5, 6, 7], 2)); // [[1, 2], [3, 4], [5, 6
 
 console.log("\n-------------------\n");
 
-// SOLUTION 4 - Using a reducer
+// SOLUTION 4 – Using reduce() (functional style)
 console.log(" Task 8: Solution 4");
 
 function chunkArrayReducer(arr, size) {
@@ -501,10 +527,10 @@ console.log(chunkArrayReducer([1, 2, 3, 4, 5, 6, 7], 2)); // [[1, 2], [3, 4], [5
 // 3. This method keeps the code concise and functional.
 
 console.log("\n-------------------\n");
-// #### CHALLENGE 9: FLATTEN ARRAY
+// ! #### CHALLENGE 9: FLATTEN ARRAY
 // * Take an array of arrays and flatten it into a single array.
 
-// SOLUTION 1 - Using `Array.prototype.flat`
+// SOLUTION 1 – Using flat() — the simplest built-in approach
 console.log(" Task 9: Solution 1");
 
 function flattenArrayFlat(arr) {
@@ -520,7 +546,7 @@ console.log(flattenArrayFlat([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4, 5,
 
 console.log("\n-------------------\n");
 
-// SOLUTION 2 - Using `Array.prototype.concat` with Spread Operator
+// SOLUTION 2 – Using concat() with spread operator
 console.log(" Task 9: Solution 2");
 
 function flattenArrayConcat(arr) {
@@ -537,7 +563,7 @@ console.log(flattenArrayConcat([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4, 
 
 console.log("\n-------------------\n");
 
-// SOLUTION 3 - Using a `for...of` loop
+// SOLUTION 3 – Using a for...of loop (manual control)
 console.log(" Task 9: Solution 3");
 
 function flattenArrayForLoop(arr) {
@@ -558,7 +584,7 @@ console.log(flattenArrayForLoop([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4,
 
 console.log("\n-------------------\n");
 
-// SOLUTION 4 - Using `reduce`
+// SOLUTION 4 – Using reduce() (functional style)
 console.log(" Task 9: Solution 4");
 
 function flattenArrayReduce(arr) {
@@ -575,7 +601,7 @@ console.log(flattenArrayReduce([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4, 
 
 console.log("\n-------------------\n");
 
-// SOLUTION 5 - Recursive Flattening
+// SOLUTION 5 – Recursive flattening (handles any depth)
 console.log(" Task 9: Solution 5");
 
 function flattenArrayRecursive(arr) {
@@ -583,20 +609,21 @@ function flattenArrayRecursive(arr) {
   return arr.reduce(
     (acc, item) =>
       acc.concat(Array.isArray(item) ? flattenArrayRecursive(item) : item),
-    []
+    [],
   );
 }
 
 console.log(flattenArrayRecursive([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4, 5, 6, 7]
 
 // Learning Point:
-// 1. Handles deeply nested arrays by checking if each `item` is an array.
-// 2. Calls itself recursively for nested arrays, flattening them completely.
-// 3. Works for any level of nested arrays, unlike `flat()` or simple methods.
+// 1. This is the most powerful solution — it handles arrays nested at any depth.
+// 2. Array.isArray(item) checks if an element is itself an array before going deeper.
+// 3. If it is an array, the function calls itself recursively to flatten it.
+// 4. Works for any level of nesting, unlike flat() or the other methods above.
 
 console.log("\n-------------------\n");
 
-// SOLUTION 6 - Using `flatMap` (ES10)
+// SOLUTION 6 – Using flatMap() — ES10 (map + flat in one step)
 console.log(" Task 9: Solution 6");
 
 function flattenArrayFlatMap(arr) {
@@ -613,10 +640,15 @@ console.log(flattenArrayFlatMap([[1, 2], [3, 4], [5, 6], [7]])); // [1, 2, 3, 4,
 
 console.log("\n-------------------\n");
 
-// #### CHALLENGE 10: ANAGRAM
-// * Return true if the two strings are anagrams, false if not.
+// ============================================================
+// ! CHALLENGE 10: ANAGRAM
+// An anagram is a word formed by rearranging the letters of another word.
+// Example: "anagram" and "nagaram" use the exact same letters.
+// Goal: Return true if the two strings are anagrams, false if not.
+// Rules: Ignore spaces, punctuation, and letter case.
+// ============================================================
 
-// SOLUTION 1 - Clean and Sort Approach
+// SOLUTION 1 – Clean, sort, and compare (easy to understand)
 console.log(" Task 10: Solution 1");
 
 function isAnagramSort(str1, str2) {
@@ -642,7 +674,7 @@ console.log(isAnagramSort("hello", "world")); // false
 
 console.log("\n-------------------\n");
 
-// SOLUTION 2 - Character Map Approach
+// SOLUTION 2 – Character map approach (O(n) — no sorting needed)
 console.log(" Task 10: Solution 2");
 
 function isAnagramMap(str1, str2) {
@@ -682,7 +714,7 @@ console.log(isAnagramMap("hello", "world")); // false
 
 console.log("\n-------------------\n");
 
-// SOLUTION 3 - Frequency Counter Approach
+// SOLUTION 3 – Frequency counter (single pass, efficient)
 console.log(" Task 10: Solution 3");
 
 function isAnagramFrequency(str1, str2) {
@@ -724,7 +756,7 @@ console.log(isAnagramFrequency("hello", "world")); // false
 
 console.log("\n-------------------\n");
 
-// SOLUTION 4 - Using Built-in Functions
+// SOLUTION 4 – Built-in one-liner (concise)
 console.log(" Task 10: Solution 4");
 
 function isAnagramBuiltIn(str1, str2) {
@@ -744,12 +776,16 @@ console.log(isAnagramBuiltIn("hello", "world")); // false
 
 console.log("\n-------------------\n");
 
-// CHALLENGE 11: ADD ALL NUMBERS
+// ============================================================
+// ! CHALLENGE 11: ADD ALL NUMBERS
+// Goal: Return the sum of all arguments passed in, regardless of how many there are.
+// Example: addAll(2, 5, 6, 7) === 20
+// ============================================================
 
-// ## SOLUTION 1: Using `arguments` Object
-// The `arguments` object is available in every function (except arrow functions).
-// It is an array-like object that contains all arguments passed to the function.
-// We iterate through the arguments using a `for` loop and add each value to a sum.
+// ## SOLUTION 1: Using the 'arguments' object (pre-ES6 style)
+// The 'arguments' object is like an array but is NOT a real array.
+// It is available in every regular function (but NOT in arrow functions).
+// You cannot call .reduce() or .map() on it directly — only a regular for loop works here.
 console.log(" Task 11: Solution 1");
 
 function addAll_Arguments() {
@@ -773,9 +809,9 @@ Disadvantages:
 - `arguments` is not an actual array, so methods like `.reduce()` or `.map()` cannot be used directly.
 --- */
 
-// ## SOLUTION 2: Using Rest Operator (`...args`)
-// The rest operator collects all arguments into a true array.
-// This makes it easier to use array methods like `.reduce()` to calculate the sum.
+// ## SOLUTION 2: Using the rest operator ...args (modern ES6+ style)
+// The rest operator collects all arguments into a TRUE array.
+// This means you can use array methods like .reduce() directly.
 
 console.log("\n-------------------\n");
 
@@ -799,9 +835,9 @@ Disadvantages:
 - Not supported in older JavaScript versions (requires ES6+).
 --- */
 
-// ## SOLUTION 3: Using Array Conversion with `arguments`
-// Converts the `arguments` object into a real array using `Array.prototype.slice.call()`.
-// Once converted, we can use `.reduce()` to calculate the sum.
+// ## SOLUTION 3: Converting 'arguments' to a real array (bridge between old and new)
+// Array.prototype.slice.call(arguments) turns the 'arguments' object into a real array.
+// Once converted, we can use .reduce() to calculate the sum.
 
 console.log("\n-------------------\n");
 
@@ -825,9 +861,9 @@ Disadvantages:
 - Relies on the old `arguments` object, which can be confusing.
 --- */
 
-// ## SOLUTION 4: Enhanced Handling with Rest Operator
-// This version includes validation to filter out non-numeric inputs.
-// It uses `.filter()` to exclude invalid data, ensuring only numbers are summed.
+// ## SOLUTION 4: With input validation (recommended for production)
+// Uses .filter() to remove non-numeric values before summing.
+// This makes the function safe to use even if someone accidentally passes a string or null.
 
 console.log("\n-------------------\n");
 
@@ -860,7 +896,13 @@ Disadvantages:
 
 console.log("\n-------------------\n");
 
-// CHALLENGE 12: SUM ALL PRIMES
+// ============================================================
+// ! CHALLENGE 12: SUM ALL PRIMES
+// A prime number is a whole number > 1 with no factors other than 1 and itself.
+// Goal: Return the sum of all prime numbers up to and including 'num'.
+// Example: sumAllPrimes(10) === 17  (2 + 3 + 5 + 7)
+// Three solutions in order of efficiency: Naive → Optimized → Sieve
+// ============================================================
 console.log(" Challenge 12: Sum All Primes - Solution 1");
 
 // ## SOLUTION 1: Naive Approach
@@ -962,7 +1004,7 @@ function sumAllPrimes_Sieve(num) {
   // Sum up all indices marked as prime
   return primes.reduce(
     (sum, isPrime, index) => (isPrime ? sum + index : sum),
-    0
+    0,
   );
 }
 
@@ -997,10 +1039,60 @@ Disadvantages:
 
 console.log("\n-------------------\n");
 
+// ============================================================
+// ! CHALLENGE 13: SEEK AND DESTROY
+// Goal: Remove from an array any elements that match the extra arguments.
+// Example: seekAndDestroy([2,3,4,6,6,"hello"], 2, 6) → [3, 4, "hello"]
+// ============================================================
+
+// ## SOLUTION 1: Using filter() + includes() (clean and modern)
+// The rest operator (...valuesToRemove) collects all extra arguments into an array.
+// filter() keeps only elements that are NOT found in that list.
+console.log(" Challenge 13: Seek and Destroy - Solution 1");
+
+function seekAndDestroy(array, ...valuesToRemove) {
+  return array.filter((item) => !valuesToRemove.includes(item));
+}
+
+console.log(seekAndDestroy([2, 3, 4, 6, 6, "hello"], 2, 6)); // [3, 4, "hello"]
+console.log(seekAndDestroy(["red", "blue", "green"], "blue")); // ["red", "green"]
+
+/* ---
+Advantages:
+- Clean, readable, and modern (ES6+).
+Disadvantages:
+- includes() is O(m) per element, so total time is O(n × m) for large inputs.
+--- */
+
+console.log("\n-------------------\n");
+
+// ## SOLUTION 2: Using the legacy 'arguments' object (pre-ES6 compatible)
+// Before ES6, there was no rest operator. We used 'arguments' to access all inputs.
+// We slice the first argument (the array) and the rest (values to remove) manually.
+console.log(" Challenge 13: Seek and Destroy - Solution 2");
+
+function seekAndDestroy_legacy() {
+  const array = Array.prototype.slice.call(arguments)[0];
+  const valuesToRemove = Array.prototype.slice.call(arguments, 1);
+  return array.filter((item) => !valuesToRemove.includes(item));
+}
+
+console.log(seekAndDestroy_legacy([2, 3, 4, 6, 6, "hello"], 2, 6)); // [3, 4, "hello"]
+console.log(seekAndDestroy_legacy(["red", "blue", "green"], "blue")); // ["red", "green"]
+
+/* ---
+Advantages:
+- Compatible with older JavaScript (pre-ES6).
+Disadvantages:
+- Verbose and harder to read. Use Solution 1 for modern projects.
+--- */
+
+console.log("\n-------------------\n");
+
 console.log(" Challenge 13: Seek and Destroy - Solution 3");
 
-// ## SOLUTION 3: Using rest parameters and Set for optimized lookups
-// A Set provides faster lookups compared to an array, improving performance.
+// ## SOLUTION 3: Using a Set for faster lookups (optimized for large data)
+// A Set provides O(1) lookups, making this faster than includes() for large inputs.
 
 function seekAndDestroy_optimized(array, ...valuesToRemove) {
   const valuesSet = new Set(valuesToRemove); // Convert values to Set for faster lookup
@@ -1057,9 +1149,13 @@ Summary of Solutions
 console.log("\n-------------------\n");
 
 console.log(" Challenge 14: Even and Odd Sums");
+// ============================================================
+// ! CHALLENGE 14: EVEN AND ODD SUMS
+// Goal: Return an array of two sums: [sumOfEvenNumbers, sumOfOddNumbers].
+// Example: evenOddSums([50, 60, 60, 45, 71]) === [170, 116]
+// ============================================================
 
-// CHALLENGE 14: EVEN AND ODD SUMS - SOLUTION 1
-// ## SOLUTION 1: Using a for loop (classic approach)
+// ## SOLUTION 1: Using a for...of loop (classic, most readable)
 function evenOddSums(arr) {
   let evenSum = 0;
   let oddSum = 0;
@@ -1088,15 +1184,14 @@ Disadvantages:
 
 console.log("\n-------------------\n");
 
-// ## SOLUTION 2: Using the reduce() method (Functional Approach)
-// This solution uses the reduce function to accumulate sums into an array.
+// ## SOLUTION 2: Using reduce() (functional style, one pass)
 function evenOddSums_reduce(arr) {
   return arr.reduce(
     (acc, num) => {
       num % 2 === 0 ? (acc[0] += num) : (acc[1] += num);
       return acc;
     },
-    [0, 0] // Initial values for evenSum and oddSum
+    [0, 0], // Initial values for evenSum and oddSum
   );
 }
 
@@ -1113,8 +1208,7 @@ Disadvantages:
 
 console.log("\n-------------------\n");
 
-// ## SOLUTION 3: Using filter() and reduce() (Separation of Concerns)
-// We first filter the even and odd numbers, then sum them separately.
+// ## SOLUTION 3: Using filter() + reduce() (most readable, two passes)
 function evenOddSums_filter(arr) {
   const evenSum = arr
     .filter((num) => num % 2 === 0)
@@ -1139,8 +1233,7 @@ Disadvantages:
 
 console.log("\n-------------------\n");
 
-// ## SOLUTION 4: Using a forEach() method
-// This solution iterates through the array and updates sums in a forEach loop.
+// ## SOLUTION 4: Using forEach() (imperative style, clean and modern)
 function evenOddSums_forEach(arr) {
   let evenSum = 0;
   let oddSum = 0;
