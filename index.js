@@ -46,63 +46,34 @@ console.log("\n-------------------\n");
 console.log("Task 2: Palindrome");
 // ============================================================
 // ! CHALLENGE 2: VALIDATE A PALINDROME
-// A palindrome reads the same forwards and backwards (e.g. "racecar").
-// Goal: Return true if the string is a palindrome, false if not.
-// Rules: Ignore spaces, punctuation, and letter case.
-// Example: isPalindrome('racecar') === true
-//          isPalindrome('hello')   === false
 // ============================================================
-// SOLUTION 1
+
+// SOLUTION 1 - Standard Function
 console.log(" Task 2: Solution 1");
 function isPalindrome(str) {
-  // Filter out with regex all non-alphanumeric characters and convert the string to lowercase.
   const cleanStr = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
-  // Check if the string is equal to the reversed version.
   return cleanStr === cleanStr.split("").reverse().join("");
 }
+console.log(isPalindrome("racecar") === true);
+console.log(isPalindrome("A man a plan a canal Panama") === true);
 
-console.log(isPalindrome("racecar") === true); // true
-console.log(isPalindrome("hello") === false); //true
-console.log(isPalindrome("hello") !== false); //false
-console.log(isPalindrome("racecar")); // true
-console.log(isPalindrome("hello")); // false
-// Note: The regex /[^a-z0-9]/gi removes all non-alphanumeric characters.
-//       The 'g' flag matches ALL occurrences; the 'i' flag ignores letter case.
-//
-// Tip: Comparing the function result to a boolean (=== true / === false)
-//      is a great way to verify your function works as expected.
-//      isPalindrome('racecar') returns true  → true  === true  → logs: true
-//      isPalindrome('hello')   returns false → false === false → logs: true
 console.log("\n-------------------\n");
 
-// SOLUTION 2 – Same logic as Solution 1, rewritten as an arrow function
+// SOLUTION 2 – Optimized Arrow Function
+// We clean the string once in a variable to avoid redundant regex processing.
 console.log(" Task 2: Solution 2");
-// Arrow functions use the same logic but have a more compact syntax.
 const isPalindromeX = (str) => {
-  return (
-    str.replace(/[^a-z0-9]/gi, "").toLowerCase() ===
-    str
-      .replace(/[^a-z0-9]/gi, "")
-      .toLowerCase()
-      .split("")
-      .reverse()
-      .join("")
-  );
+  const clean = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
+  return clean === clean.split("").reverse().join("");
 };
-// * Logic of the code is the same as the previous solution, using an arrow function.
-// * The '===' operator compares the cleaned original string to the cleaned reversed string.
-
-console.log(isPalindromeX("racecar") === true); // true
-console.log(isPalindromeX("hello") === false); //true
-console.log(isPalindromeX("hello") !== false); //false
-console.log(isPalindromeX("racecar")); // true
-console.log(isPalindromeX("hello")); // false
+console.log(isPalindromeX("hello") === false);
 
 console.log("\n-------------------\n");
-// SOLUTION 3 – Ultra-compact arrow function (implicit return, no curly braces)
-// Same logic as Solution 2, but written as a single expression.
-// When an arrow function body is one expression, you can drop the 'return'
-// keyword and the curly braces {} — the result is returned automatically.
+
+// SOLUTION 3 – Ultra-compact (The "True" Ninja One-Liner)
+// Note: This version is concise, but repeats the cleaning logic.
+// Great for showing off JS syntax knowledge!
+console.log(" Task 2: Solution 3");
 const isPalindromeNinja = (str) =>
   str.replace(/[^a-z0-9]/gi, "").toLowerCase() ===
   str
@@ -111,17 +82,46 @@ const isPalindromeNinja = (str) =>
     .split("")
     .reverse()
     .join("");
-console.log(" Task 2: Solution 3");
-// * Note: This is the same logic as Solutions 1 and 2 with implicit return.
-console.log(isPalindromeX("racecar") === true); // true
-console.log(isPalindromeX("hello") === false); //true
-console.log(isPalindromeX("hello") !== false); //false
-console.log(isPalindromeX("racecar")); // true
-console.log(isPalindromeX("hello")); // false
+
+console.log(isPalindromeNinja("racecar") === true);
+console.log(isPalindromeNinja("hello") === false); // Fixed function name here
+
+console.log("\n-------------------\n");
+
+// SOLUTION 4 – The "two-Pointer Technique" (efficient, no extra space)
+// Instead of reversing the whole string (which takes $O(n)$ space), use two pointers to compare from both ends. This is more memory-efficient.
+const isPalindromeTwoPointer = (str) => {
+  const clean = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
+  let left = 0;
+  let right = clean.length - 1;
+
+  while (left < right) {
+    if (clean[left] !== clean[right]) return false;
+    left++;
+    right--;
+  }
+  return true;
+};
+console.log(" Task 2: Solution 4");
+// * This method compares characters from the start and end of the cleaned string.
+console.log(isPalindromeTwoPointer("racecar") === true); // true
+console.log(isPalindromeTwoPointer("hello") === false); //true
+console.log(isPalindromeTwoPointer("hello") !== false); //false
+console.log(isPalindromeTwoPointer("A man a plan a canal Panama")); // true
+
+/* ---
+Learning Points:
+1. The Two-Pointer technique is more "Memory Efficient" because it doesn't 
+   rely on .split() or .reverse(), which create extra arrays in memory.
+2. We stop at the middle (left < right), meaning we only do N/2 comparisons.
+3. This is a favorite "Optimization" question in technical interviews!
+--- */
 
 console.log("\n-------------------\n");
 
 console.log("Task 3: Reverse an Integer");
+
+console.log("\n-------------------\n");
 // ============================================================
 // ! CHALLENGE 3: REVERSE AN INTEGER
 // Goal: Return the digits of an integer in reverse order.
@@ -283,6 +283,27 @@ console.log(maxCharacterX("javascript") === "a"); // true
 // Same logic as Solution 1 — just rewritten as an arrow function.
 
 console.log("\n-------------------\n");
+
+// SOLUTION 3 – The reduce One-Liner (functional style)
+// Using reduce to build the map and find the max character in a single functional chain. This is more concise but less readable for beginners.
+console.log(" Task 5: Solution 3");
+const maxCharOneLiner = (str) => {
+  const charMap = [...str].reduce((acc, char) => {
+    acc[char] = (acc[char] || 0) + 1;
+    return acc;
+  }, {});
+
+  return Object.keys(charMap).reduce((a, b) =>
+    charMap[a] > charMap[b] ? a : b,
+  );
+};
+console.log(maxCharOneLiner("javascript") === "a"); // true
+// Learning Point:
+// 1. The first reduce builds the character count map in a functional style.
+// 2. The second reduce iterates over the keys of the map to find the character with the highest count.
+
+console.log("\n-------------------\n");
+
 console.log("Task 6: FizzBuzz");
 // ============================================================
 // ! CHALLENGE 6: FIZZBUZZ
